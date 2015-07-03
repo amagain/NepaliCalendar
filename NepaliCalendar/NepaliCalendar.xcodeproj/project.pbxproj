@@ -19,6 +19,8 @@
 		D9A3F76E1B46C1D70039CB88 /* NCCollectionViewHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A3F76D1B46C1D70039CB88 /* NCCollectionViewHeaderCell.m */; };
 		D9A3F7711B46E4160039CB88 /* ParentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A3F7701B46E4160039CB88 /* ParentCell.m */; };
 		D9A3F7741B46E7680039CB88 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A3F7731B46E7680039CB88 /* HeaderView.m */; };
+		D9A3F77C1B4717DE0039CB88 /* NepaliMonthsData.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A3F7791B4717DE0039CB88 /* NepaliMonthsData.m */; };
+		D9A3F77D1B4717DE0039CB88 /* SGNepaliDateConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A3F77B1B4717DE0039CB88 /* SGNepaliDateConverter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,10 @@
 		D9A3F7701B46E4160039CB88 /* ParentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParentCell.m; sourceTree = "<group>"; };
 		D9A3F7721B46E7680039CB88 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
 		D9A3F7731B46E7680039CB88 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		D9A3F7781B4717DE0039CB88 /* NepaliMonthsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NepaliMonthsData.h; path = ../NepaliMonthsData.h; sourceTree = "<group>"; };
+		D9A3F7791B4717DE0039CB88 /* NepaliMonthsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NepaliMonthsData.m; path = ../NepaliMonthsData.m; sourceTree = "<group>"; };
+		D9A3F77A1B4717DE0039CB88 /* SGNepaliDateConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SGNepaliDateConverter.h; path = ../SGNepaliDateConverter.h; sourceTree = "<group>"; };
+		D9A3F77B1B4717DE0039CB88 /* SGNepaliDateConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SGNepaliDateConverter.m; path = ../SGNepaliDateConverter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,20 +102,12 @@
 		D9A3F73C1B46BBAF0039CB88 /* NepaliCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				D9A3F77E1B4717EB0039CB88 /* Model */,
+				D9A3F7771B4717650039CB88 /* View */,
 				D9A3F7411B46BBAF0039CB88 /* AppDelegate.h */,
 				D9A3F7421B46BBAF0039CB88 /* AppDelegate.m */,
 				D9A3F7441B46BBAF0039CB88 /* ViewController.h */,
 				D9A3F7451B46BBAF0039CB88 /* ViewController.m */,
-				D9A3F7721B46E7680039CB88 /* HeaderView.h */,
-				D9A3F7731B46E7680039CB88 /* HeaderView.m */,
-				D9A3F76F1B46E4160039CB88 /* ParentCell.h */,
-				D9A3F7701B46E4160039CB88 /* ParentCell.m */,
-				D9A3F7691B46BFFB0039CB88 /* NCCollectionViewCell.h */,
-				D9A3F76A1B46BFFB0039CB88 /* NCCollectionViewCell.m */,
-				D9A3F76C1B46C1D70039CB88 /* NCCollectionViewHeaderCell.h */,
-				D9A3F76D1B46C1D70039CB88 /* NCCollectionViewHeaderCell.m */,
-				D9A3F7661B46BC3C0039CB88 /* NepaliCalendarView.h */,
-				D9A3F7671B46BC3C0039CB88 /* NepaliCalendarView.m */,
 				D9A3F7471B46BBAF0039CB88 /* Main.storyboard */,
 				D9A3F74A1B46BBAF0039CB88 /* Images.xcassets */,
 				D9A3F74C1B46BBAF0039CB88 /* LaunchScreen.xib */,
@@ -142,6 +140,34 @@
 				D9A3F7581B46BBAF0039CB88 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D9A3F7771B4717650039CB88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D9A3F7721B46E7680039CB88 /* HeaderView.h */,
+				D9A3F7731B46E7680039CB88 /* HeaderView.m */,
+				D9A3F76F1B46E4160039CB88 /* ParentCell.h */,
+				D9A3F7701B46E4160039CB88 /* ParentCell.m */,
+				D9A3F7691B46BFFB0039CB88 /* NCCollectionViewCell.h */,
+				D9A3F76A1B46BFFB0039CB88 /* NCCollectionViewCell.m */,
+				D9A3F76C1B46C1D70039CB88 /* NCCollectionViewHeaderCell.h */,
+				D9A3F76D1B46C1D70039CB88 /* NCCollectionViewHeaderCell.m */,
+				D9A3F7661B46BC3C0039CB88 /* NepaliCalendarView.h */,
+				D9A3F7671B46BC3C0039CB88 /* NepaliCalendarView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D9A3F77E1B4717EB0039CB88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D9A3F7781B4717DE0039CB88 /* NepaliMonthsData.h */,
+				D9A3F7791B4717DE0039CB88 /* NepaliMonthsData.m */,
+				D9A3F77A1B4717DE0039CB88 /* SGNepaliDateConverter.h */,
+				D9A3F77B1B4717DE0039CB88 /* SGNepaliDateConverter.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9A3F77C1B4717DE0039CB88 /* NepaliMonthsData.m in Sources */,
+				D9A3F77D1B4717DE0039CB88 /* SGNepaliDateConverter.m in Sources */,
 				D9A3F76E1B46C1D70039CB88 /* NCCollectionViewHeaderCell.m in Sources */,
 				D9A3F76B1B46BFFB0039CB88 /* NCCollectionViewCell.m in Sources */,
 				D9A3F7461B46BBAF0039CB88 /* ViewController.m in Sources */,
