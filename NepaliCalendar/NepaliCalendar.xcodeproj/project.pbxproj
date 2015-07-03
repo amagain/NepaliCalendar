@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CD7E22131B472637008799DC /* NepaliMonthsData.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E22101B472637008799DC /* NepaliMonthsData.m */; };
 		CD7E22141B472637008799DC /* SGNepaliDateConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E22121B472637008799DC /* SGNepaliDateConverter.m */; };
+		CD7E221B1B472D24008799DC /* DateConverterTesterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E221A1B472D24008799DC /* DateConverterTesterVC.m */; };
 		DDB22C401B46B2EE001A8B96 /* NepaliCalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C3F1B46B2EE001A8B96 /* NepaliCalendarTests.m */; };
 		DDB22C4D1B46B3F2001A8B96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C4B1B46B3F2001A8B96 /* AppDelegate.m */; };
 		DDB22C4E1B46B3F2001A8B96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C4C1B46B3F2001A8B96 /* main.m */; };
@@ -44,6 +45,8 @@
 		CD7E22101B472637008799DC /* NepaliMonthsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NepaliMonthsData.m; path = Utilities/NepaliMonthsData.m; sourceTree = "<group>"; };
 		CD7E22111B472637008799DC /* SGNepaliDateConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SGNepaliDateConverter.h; path = Utilities/SGNepaliDateConverter.h; sourceTree = "<group>"; };
 		CD7E22121B472637008799DC /* SGNepaliDateConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SGNepaliDateConverter.m; path = Utilities/SGNepaliDateConverter.m; sourceTree = "<group>"; };
+		CD7E22191B472D24008799DC /* DateConverterTesterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateConverterTesterVC.h; path = Controller/DateConverterTesterVC/DateConverterTesterVC.h; sourceTree = "<group>"; };
+		CD7E221A1B472D24008799DC /* DateConverterTesterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateConverterTesterVC.m; path = Controller/DateConverterTesterVC/DateConverterTesterVC.m; sourceTree = "<group>"; };
 		DDB22C201B46B2EE001A8B96 /* NepaliCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NepaliCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB22C391B46B2EE001A8B96 /* NepaliCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NepaliCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB22C3E1B46B2EE001A8B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,6 +110,15 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
+		CD7E22151B472924008799DC /* DateConverterTesterVC */ = {
+			isa = PBXGroup;
+			children = (
+				CD7E22191B472D24008799DC /* DateConverterTesterVC.h */,
+				CD7E221A1B472D24008799DC /* DateConverterTesterVC.m */,
+			);
+			name = DateConverterTesterVC;
+			sourceTree = "<group>";
+		};
 		DDB22C171B46B2EE001A8B96 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +140,7 @@
 		DDB22C221B46B2EE001A8B96 /* NepaliCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				CD7E22151B472924008799DC /* DateConverterTesterVC */,
 				CD7E220E1B472620008799DC /* Utilities */,
 				DDB22C631B46C5CD001A8B96 /* Controller */,
 				DDB22C5A1B46B9F2001A8B96 /* Category */,
@@ -334,6 +347,7 @@
 				DDB22C6E1B46E4D4001A8B96 /* NSNumber+NepaliMonth.m in Sources */,
 				DDB22C661B46C5F0001A8B96 /* TextConverterVC.m in Sources */,
 				CD7E22141B472637008799DC /* SGNepaliDateConverter.m in Sources */,
+				CD7E221B1B472D24008799DC /* DateConverterTesterVC.m in Sources */,
 				CD7E22131B472637008799DC /* NepaliMonthsData.m in Sources */,
 				DDB22C5D1B46BA05001A8B96 /* NSString+NepaliNumber.m in Sources */,
 				DDB22C7E1B4718F4001A8B96 /* DateConverterVC.m in Sources */,
