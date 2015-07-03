@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DDB22C401B46B2EE001A8B96 /* NepaliCalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C3F1B46B2EE001A8B96 /* NepaliCalendarTests.m */; };
-		DDB22C5F1B46BFD9001A8B96 /* TestConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C5E1B46BFD9001A8B96 /* TestConverter.m */; };
-		DDB22C621B46C41C001A8B96 /* FakeTextContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C611B46C41C001A8B96 /* FakeTextContainer.m */; };
 		DDB22C4D1B46B3F2001A8B96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C4B1B46B3F2001A8B96 /* AppDelegate.m */; };
 		DDB22C4E1B46B3F2001A8B96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C4C1B46B3F2001A8B96 /* main.m */; };
 		DDB22C551B46B41D001A8B96 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB22C501B46B41D001A8B96 /* LaunchScreen.xib */; };
@@ -43,9 +41,6 @@
 		DDB22C391B46B2EE001A8B96 /* NepaliCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NepaliCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB22C3E1B46B2EE001A8B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDB22C3F1B46B2EE001A8B96 /* NepaliCalendarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NepaliCalendarTests.m; sourceTree = "<group>"; };
-		DDB22C5E1B46BFD9001A8B96 /* TestConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestConverter.m; sourceTree = "<group>"; };
-		DDB22C601B46C41C001A8B96 /* FakeTextContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeTextContainer.h; sourceTree = "<group>"; };
-		DDB22C611B46C41C001A8B96 /* FakeTextContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeTextContainer.m; sourceTree = "<group>"; };
 		DDB22C4A1B46B3F2001A8B96 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DDB22C4B1B46B3F2001A8B96 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DDB22C4C1B46B3F2001A8B96 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -125,9 +120,6 @@
 		DDB22C3C1B46B2EE001A8B96 /* NepaliCalendarTests */ = {
 			isa = PBXGroup;
 			children = (
-				DDB22C601B46C41C001A8B96 /* FakeTextContainer.h */,
-				DDB22C611B46C41C001A8B96 /* FakeTextContainer.m */,
-				DDB22C5E1B46BFD9001A8B96 /* TestConverter.m */,
 				DDB22C691B46C763001A8B96 /* TestNumberConverter.m */,
 				DDB22C721B46F1A2001A8B96 /* TestMonthNameConverter.m */,
 				DDB22C741B46FC36001A8B96 /* TestDayNameConverter.m */,
@@ -325,7 +317,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDB22C5F1B46BFD9001A8B96 /* TestConverter.m in Sources */,
 				DDB22C401B46B2EE001A8B96 /* NepaliCalendarTests.m in Sources */,
 				DDB22C6B1B46C763001A8B96 /* TestNumberConverter.m in Sources */,
 				DDB22C731B46F1A2001A8B96 /* TestMonthNameConverter.m in Sources */,
