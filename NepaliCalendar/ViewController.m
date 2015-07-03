@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "NepaliCalendarView.h"
 
 @interface ViewController ()
 
@@ -16,6 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NepaliCalendarView *calendar = [[NepaliCalendarView alloc] initWithFrame:self.view.frame];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 

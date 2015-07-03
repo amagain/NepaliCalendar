@@ -15,6 +15,8 @@
 		D9A3F74E1B46BBAF0039CB88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9A3F74C1B46BBAF0039CB88 /* LaunchScreen.xib */; };
 		D9A3F75A1B46BBAF0039CB88 /* NepaliCalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A3F7591B46BBAF0039CB88 /* NepaliCalendarTests.m */; };
 		D9A3F7681B46BC3C0039CB88 /* NepaliCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A3F7671B46BC3C0039CB88 /* NepaliCalendarView.m */; };
+		D9A3F76B1B46BFFB0039CB88 /* NCCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A3F76A1B46BFFB0039CB88 /* NCCollectionViewCell.m */; };
+		D9A3F76E1B46C1D70039CB88 /* NCCollectionViewHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A3F76D1B46C1D70039CB88 /* NCCollectionViewHeaderCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,10 @@
 		D9A3F7591B46BBAF0039CB88 /* NepaliCalendarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NepaliCalendarTests.m; sourceTree = "<group>"; };
 		D9A3F7661B46BC3C0039CB88 /* NepaliCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NepaliCalendarView.h; sourceTree = "<group>"; };
 		D9A3F7671B46BC3C0039CB88 /* NepaliCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NepaliCalendarView.m; sourceTree = "<group>"; };
+		D9A3F7691B46BFFB0039CB88 /* NCCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCollectionViewCell.h; sourceTree = "<group>"; };
+		D9A3F76A1B46BFFB0039CB88 /* NCCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCollectionViewCell.m; sourceTree = "<group>"; };
+		D9A3F76C1B46C1D70039CB88 /* NCCollectionViewHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCollectionViewHeaderCell.h; sourceTree = "<group>"; };
+		D9A3F76D1B46C1D70039CB88 /* NCCollectionViewHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCollectionViewHeaderCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,10 @@
 				D9A3F7421B46BBAF0039CB88 /* AppDelegate.m */,
 				D9A3F7441B46BBAF0039CB88 /* ViewController.h */,
 				D9A3F7451B46BBAF0039CB88 /* ViewController.m */,
+				D9A3F7691B46BFFB0039CB88 /* NCCollectionViewCell.h */,
+				D9A3F76A1B46BFFB0039CB88 /* NCCollectionViewCell.m */,
+				D9A3F76C1B46C1D70039CB88 /* NCCollectionViewHeaderCell.h */,
+				D9A3F76D1B46C1D70039CB88 /* NCCollectionViewHeaderCell.m */,
 				D9A3F7661B46BC3C0039CB88 /* NepaliCalendarView.h */,
 				D9A3F7671B46BC3C0039CB88 /* NepaliCalendarView.m */,
 				D9A3F7471B46BBAF0039CB88 /* Main.storyboard */,
@@ -224,6 +234,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9A3F76E1B46C1D70039CB88 /* NCCollectionViewHeaderCell.m in Sources */,
+				D9A3F76B1B46BFFB0039CB88 /* NCCollectionViewCell.m in Sources */,
 				D9A3F7461B46BBAF0039CB88 /* ViewController.m in Sources */,
 				D9A3F7681B46BC3C0039CB88 /* NepaliCalendarView.m in Sources */,
 				D9A3F7431B46BBAF0039CB88 /* AppDelegate.m in Sources */,
