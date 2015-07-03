@@ -12,7 +12,7 @@
 @interface SGNepaliDateConverter()
 
 @property (strong, nonatomic) NSArray *englishDaysNameArray;
-@property (strong,nonatomic) NSArray *nepaliMonthsNameInNepaliArray;
+@property (strong, nonatomic) NSArray *nepaliMonthsNameInNepaliArray;
 @property (strong, nonatomic) NSArray *nepaliDaysNameInNepaliArray;
 @property (strong, nonatomic) NSDictionary *numbersMappingEnglishToNepaliDict;
 @property (strong, nonatomic) NSMutableDictionary *nepaliDateComponents;

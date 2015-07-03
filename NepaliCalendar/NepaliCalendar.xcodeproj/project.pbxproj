@@ -23,6 +23,7 @@
 		DDB22C751B46FC36001A8B96 /* TestDayNameConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C741B46FC36001A8B96 /* TestDayNameConverter.m */; };
 		DDB22C7A1B4717CB001A8B96 /* NepaliMonthsData.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C771B4717CB001A8B96 /* NepaliMonthsData.m */; };
 		DDB22C7B1B4717CB001A8B96 /* SGNepaliDateConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C791B4717CB001A8B96 /* SGNepaliDateConverter.m */; };
+		DDB22C7E1B4718F4001A8B96 /* DateConverterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C7D1B4718F4001A8B96 /* DateConverterVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		DDB22C771B4717CB001A8B96 /* NepaliMonthsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NepaliMonthsData.m; sourceTree = "<group>"; };
 		DDB22C781B4717CB001A8B96 /* SGNepaliDateConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGNepaliDateConverter.h; sourceTree = "<group>"; };
 		DDB22C791B4717CB001A8B96 /* SGNepaliDateConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGNepaliDateConverter.m; sourceTree = "<group>"; };
+		DDB22C7C1B4718F4001A8B96 /* DateConverterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateConverterVC.h; sourceTree = "<group>"; };
+		DDB22C7D1B4718F4001A8B96 /* DateConverterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateConverterVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +195,8 @@
 			children = (
 				DDB22C641B46C5F0001A8B96 /* TextConverterVC.h */,
 				DDB22C651B46C5F0001A8B96 /* TextConverterVC.m */,
+				DDB22C7C1B4718F4001A8B96 /* DateConverterVC.h */,
+				DDB22C7D1B4718F4001A8B96 /* DateConverterVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -304,6 +309,7 @@
 				DDB22C6E1B46E4D4001A8B96 /* NSNumber+NepaliMonth.m in Sources */,
 				DDB22C661B46C5F0001A8B96 /* TextConverterVC.m in Sources */,
 				DDB22C5D1B46BA05001A8B96 /* NSString+NepaliNumber.m in Sources */,
+				DDB22C7E1B4718F4001A8B96 /* DateConverterVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
