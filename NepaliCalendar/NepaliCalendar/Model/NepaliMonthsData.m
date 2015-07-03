@@ -107,9 +107,9 @@
                                              };
     self.numberOfDaysInNepaliMonths = [[NSDictionary alloc] initWithDictionary:nepaliMonthsDataDict];
     
-    self.startNepaliYear = 2000;
-    self.startNepaliMonth = 9;
-    self.startNepaliDay = 17 - 1;
+    self.startingNepaliYear = 2000;
+    self.startingNepaliMonth = 9;
+    self.startingNepaliDay = 17 - 1;
     return self;
 }
 

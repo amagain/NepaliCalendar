@@ -13,9 +13,9 @@
 @property (strong, nonatomic) NSDictionary *numberOfDaysInNepaliMonths;
 @property (strong, nonatomic) NSMutableDictionary *nepaliDateComponents;
 @property (strong, nonatomic) NSMutableDictionary *englishDateComponents;
-@property NSUInteger startNepaliYear;
+@property NSUInteger startingNepaliYear;
 @property NSUInteger startEnglishYear;
-@property NSUInteger startNepaliMonth;
-@property NSUInteger startNepaliDay;
+@property NSUInteger startingNepaliMonth;
+@property NSUInteger startingNepaliDay;
 
 @end

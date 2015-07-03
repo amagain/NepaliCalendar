@@ -148,10 +148,6 @@
         NSArray *englishMonthsArray = @[ @31, @28, @31, @30, @31, @30, @31, @31, @30, @31, @30, @31 ];
         NSArray *englishLeapYearMonthsArray = @[ @31, @29, @31, @30, @31, @30, @31, @31, @30, @31, @30, @31 ];
         
-        //        NSUInteger startEnglishYear = 1944;									//spear head english date...
-        //        NSUInteger startNepaliYear = 2000;
-        //        NSUInteger startNepaliMonth = 9;
-        //        NSUInteger startNepaliDay = 17-1;		//spear head nepali date...
         NSUInteger totalEnglishDays = 0;
         NSUInteger totalNepaliDays = 0;
         NSUInteger a=0; NSUInteger day = 7-1;		//all the initializations...
@@ -186,14 +182,18 @@
         // count total no. of days in-terms of date
         totalEnglishDays += engDay;
         
-        i = 0; j = self.objNepaliMonthsData.startNepaliMonth;
-        totalNepaliDays = self.objNepaliMonthsData.startNepaliDay;
-        m = self.objNepaliMonthsData.startNepaliMonth;
-        y = self.objNepaliMonthsData.startNepaliYear;
+        i = 0; j = self.objNepaliMonthsData.startingNepaliMonth;
+        totalNepaliDays = self.objNepaliMonthsData.startingNepaliDay;
+        m = self.objNepaliMonthsData.startingNepaliMonth;
+        y = self.objNepaliMonthsData.startingNepaliYear;
         
         // count nepali date from array
         while(totalEnglishDays != 0) {
-            a = [[self.objNepaliMonthsData.numberOfDaysInNepaliMonths objectForKey:[NSNumber numberWithInteger:i]][j] integerValue];
+            NSNumber *key = [NSNumber numberWithInteger:i];
+            NSArray *currentNepaliMonth = [self.objNepaliMonthsData.numberOfDaysInNepaliMonths objectForKey:key];
+            NSNumber *numberOfDaysInCurrentMonth = currentNepaliMonth[j];
+
+            a = [numberOfDaysInCurrentMonth integerValue];
             totalNepaliDays++;						//count the days
             day++;								//count the days interms of 7 days
             if(totalNepaliDays > a) {
@@ -203,11 +203,11 @@
             }
             if(day > 7)
                 day = 1;
-            if(m > 12){
+            if(m > 12) {
                 y++;
                 m = 1;
             }
-            if(j > 12){
+            if(j > 12) {
                 j = 1; i++;
             }
             totalEnglishDays--;
@@ -223,12 +223,23 @@
     }
 }
 
-- (NSMutableDictionary *)convertNepaliDateToEnglishWithYear:(NSUInteger)nepaliYear month:(NSUInteger)nepaliMonth andDay:(NSUInteger)nepaliDay {
-    NSUInteger def_eyy = 1943	; NSUInteger def_emm=4 ; NSUInteger def_edd=14-1;		// init english date.
-    NSUInteger def_nyy = 2000; NSUInteger def_nmm = 1; NSUInteger def_ndd = 1;		// equivalent nepali date.
-    NSUInteger total_eDays=0; NSUInteger total_nDays=0; NSUInteger a=0; NSUInteger day=4-1;		// initializations...
-    NSUInteger m = 0; NSUInteger y = 0; NSUInteger i=0;
-    NSUInteger k = 0;	NSUInteger numDay = 0;
+- (NSMutableDictionary *)convertNepaliDateToEnglishWithYear:(NSUInteger)nepaliYear
+                                                      month:(NSUInteger)nepaliMonth
+                                                     andDay:(NSUInteger)nepaliDay {
+    
+    NSUInteger startingEnglishYear = 1943;
+    NSUInteger startingEnglishMonth = 4 ;
+    NSUInteger startingEnglishDay = 14-1;
+    NSUInteger startingNepaliYear = 2000;
+    NSUInteger totalEnglishDays = 0;
+    NSUInteger totalNepaliDays = 0;
+    NSUInteger a = 0;
+    NSUInteger day = 4-1;
+    NSUInteger m = 0;
+    NSUInteger y = 0;
+    NSUInteger i = 0;
+    NSUInteger k = 0;
+    NSUInteger numDay = 0;
     
     NSArray *month = @[ @0, @31, @28, @31, @30, @31, @30, @31, @31, @30, @31, @30, @31 ];
     NSArray *lmonth = @[ @0, @31, @29, @31, @30, @31, @30, @31, @31, @30, @31, @30, @31 ];
@@ -239,40 +250,47 @@
     } else {
         
         // count total days in-terms of year
-        for(i=0; i<(nepaliYear - def_nyy); i++){
-            for(NSUInteger j=1; j<=12; j++){
-                total_nDays +=
-                [[self.objNepaliMonthsData.numberOfDaysInNepaliMonths objectForKey:[NSNumber numberWithInteger:k]][j] integerValue];
+        for(i=0; i<(nepaliYear - startingNepaliYear); i++) {
+            for(NSUInteger j = 1; j <= 12; j++) {
+                
+                NSNumber *key = [NSNumber numberWithInteger:k];
+                NSArray *currentNepaliMonth = [self.objNepaliMonthsData.numberOfDaysInNepaliMonths objectForKey:key];
+                NSNumber *numberOfDaysInCurrentMonth = currentNepaliMonth[j];
+
+                totalNepaliDays += [numberOfDaysInCurrentMonth integerValue];
             }
             k++;
         }
         
         // count total days in-terms of month
         for(NSUInteger j = 1; j < nepaliMonth; j++) {
-            total_nDays += [[self.objNepaliMonthsData.numberOfDaysInNepaliMonths objectForKey:[NSNumber numberWithInteger:k]][j] integerValue];
+            
+            NSNumber *key = [NSNumber numberWithInteger:k];
+            NSArray *currentNepaliMonth = [self.objNepaliMonthsData.numberOfDaysInNepaliMonths objectForKey:key];
+            NSNumber *numberOfDaysInCurrentMonth = currentNepaliMonth[j];
+            
+            totalNepaliDays += [numberOfDaysInCurrentMonth integerValue];
+
         }
         
         // count total days in-terms of dat
-        total_nDays += nepaliDay;
+        totalNepaliDays += nepaliDay;
         
         //calculation of equivalent english date...
-        total_eDays = def_edd;
-        m = def_emm;
-        y = def_eyy;
-        while(total_nDays != 0){
-            if([self isLeapYear:y])
-            {
+        totalEnglishDays = startingEnglishDay;
+        m = startingEnglishMonth;
+        y = startingEnglishYear;
+        while(totalNepaliDays != 0){
+            if([self isLeapYear:y]) {
                 a = [lmonth[m] integerValue];
-            }
-            else
-            {
+            } else {
                 a = [month[m] integerValue];
             }
-            total_eDays++;
+            totalEnglishDays++;
             day++;
-            if(total_eDays > a){
+            if(totalEnglishDays > a){
                 m++;
-                total_eDays = 1;
+                totalEnglishDays = 1;
                 if(m > 12){
                     y++;
                     m = 1;
@@ -280,18 +298,48 @@
             }
             if(day > 7)
                 day = 1;
-            total_nDays--;	
+            totalNepaliDays--;	
         }
         numDay = day;
         
         self.englishDateComponents[@"year"] = [NSNumber numberWithInteger:y];
-        self.englishDateComponents[@"date"] = [NSNumber numberWithInteger:total_eDays];
+        self.englishDateComponents[@"date"] = [NSNumber numberWithInteger:totalEnglishDays];
         self.englishDateComponents[@"day"] = [NSNumber numberWithInteger:day];
         self.englishDateComponents[@"month"] = [NSNumber numberWithInteger:m];
 
         
         return self.englishDateComponents;
     }
+}
+
+- (NSMutableDictionary *)convertNepaliDateToEnglishWithDate:(NSDate *)nepaliDate {
+    
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+    NSDateComponents* components = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:nepaliDate];
+    
+    NSUInteger nepaliMonth = [components month];
+    NSUInteger nepaliDay = [components day];
+    NSUInteger nepaliYear = [components year];
+    
+    NSMutableDictionary *englishDateDictionary = [[NSMutableDictionary alloc] init];
+    englishDateDictionary = [self convertNepaliDateToEnglishWithYear:nepaliYear month:nepaliMonth andDay:nepaliDay];
+    
+    return englishDateDictionary;
+}
+
+- (NSMutableDictionary *)convertEnglishDateToNepaliWithDate:(NSDate *)englishDate {
+    
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+    NSDateComponents* components = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:englishDate];
+    
+    NSUInteger nepaliMonth = [components month];
+    NSUInteger nepaliDay = [components day];
+    NSUInteger nepaliYear = [components year];
+    
+    NSMutableDictionary *nepaliDateDictionary = [[NSMutableDictionary alloc] init];
+    nepaliDateDictionary = [self convertNepaliDateToEnglishWithYear:nepaliYear month:nepaliMonth andDay:nepaliDay];
+    
+    return nepaliDateDictionary;
 }
 
 
