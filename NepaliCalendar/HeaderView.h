@@ -1,5 +1,5 @@
 //
-//  NCCollectionViewHeaderCell.h
+//  HeaderView.h
 //  NepaliCalendar
 //
 //  Created by shrstha kusal on 7/3/15.
@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ParentCell.h"
 
-@interface NCCollectionViewHeaderCell : ParentCell
+@interface HeaderView : UICollectionReusableView
 
-//@property (strong, nonatomic) UILabel *labelWeek;
+@property (strong, nonatomic) UILabel *label;
 
 @end

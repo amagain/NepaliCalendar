@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ParentCell.h"
 
-@interface NCCollectionViewCell : UICollectionViewCell
+@interface NCCollectionViewCell : ParentCell
 
-@property (strong, nonatomic) UILabel *labelDate;
+//@property (strong, nonatomic) UILabel *labelDate;
 
 @end

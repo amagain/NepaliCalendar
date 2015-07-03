@@ -14,13 +14,15 @@
     self = [super initWithFrame:frame];
     if (self) {
         //init here
-        [self designCell];
+//        [self designCell];
     }
     return self;
 }
 
-- (void)designCell {
-    
-}
+//- (void)designCell {
+//    self.labelDate = [[UILabel alloc] initWithFrame:self.frame];
+//    self.labelDate.textColor = [UIColor blackColor];
+//    [self addSubview:self.labelDate];
+//}
 
 @end

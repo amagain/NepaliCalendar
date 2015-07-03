@@ -14,13 +14,13 @@
     self = [super initWithFrame:frame];
     if (self) {
         //
-        [self designCell];
+//        [self designCell];
     }
     return self;
 }
-
-- (void)designCell {
-    
-}
+//
+//- (void)designCell {
+//    
+//}
 
 @end
