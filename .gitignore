@@ -2,11 +2,4 @@
 xcuserdata
 /build/*
 /Pods/build/*
-build/
-*.pbxuser
-xcuserdata
-*.xccheckout
 DerivedData
-*.hmap
-*.ipa
-*.xcuserstate
