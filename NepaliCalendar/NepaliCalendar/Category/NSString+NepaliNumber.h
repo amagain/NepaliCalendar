@@ -10,6 +10,6 @@
 
 @interface NSString (NepaliNumber)
 
-- (NSString *) string2NepaliNumber;
+- (NSString *)stringToNepaliNumber;
 
 @end

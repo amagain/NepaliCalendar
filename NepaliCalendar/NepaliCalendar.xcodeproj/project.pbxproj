@@ -14,6 +14,9 @@
 		DDB22C561B46B41D001A8B96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB22C521B46B41D001A8B96 /* Main.storyboard */; };
 		DDB22C571B46B41D001A8B96 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB22C541B46B41D001A8B96 /* Images.xcassets */; };
 		DDB22C5D1B46BA05001A8B96 /* NSString+NepaliNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C5C1B46BA05001A8B96 /* NSString+NepaliNumber.m */; };
+		DDB22C661B46C5F0001A8B96 /* TextConverterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C651B46C5F0001A8B96 /* TextConverterVC.m */; };
+		DDB22C6A1B46C763001A8B96 /* FakeTextContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C681B46C763001A8B96 /* FakeTextContainer.m */; };
+		DDB22C6B1B46C763001A8B96 /* TestNumberConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C691B46C763001A8B96 /* TestNumberConverter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,11 @@
 		DDB22C541B46B41D001A8B96 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DDB22C5B1B46BA05001A8B96 /* NSString+NepaliNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NepaliNumber.h"; sourceTree = "<group>"; };
 		DDB22C5C1B46BA05001A8B96 /* NSString+NepaliNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NepaliNumber.m"; sourceTree = "<group>"; };
+		DDB22C641B46C5F0001A8B96 /* TextConverterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextConverterVC.h; sourceTree = "<group>"; };
+		DDB22C651B46C5F0001A8B96 /* TextConverterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextConverterVC.m; sourceTree = "<group>"; };
+		DDB22C671B46C763001A8B96 /* FakeTextContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeTextContainer.h; sourceTree = "<group>"; };
+		DDB22C681B46C763001A8B96 /* FakeTextContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeTextContainer.m; sourceTree = "<group>"; };
+		DDB22C691B46C763001A8B96 /* TestNumberConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNumberConverter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,7 @@
 		DDB22C221B46B2EE001A8B96 /* NepaliCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				DDB22C631B46C5CD001A8B96 /* Controller */,
 				DDB22C5A1B46B9F2001A8B96 /* Category */,
 				DDB22C591B46B9DF001A8B96 /* Model */,
 				DDB22C581B46B9D1001A8B96 /* View */,
@@ -92,6 +101,9 @@
 		DDB22C3C1B46B2EE001A8B96 /* NepaliCalendarTests */ = {
 			isa = PBXGroup;
 			children = (
+				DDB22C691B46C763001A8B96 /* TestNumberConverter.m */,
+				DDB22C671B46C763001A8B96 /* FakeTextContainer.h */,
+				DDB22C681B46C763001A8B96 /* FakeTextContainer.m */,
 				DDB22C3F1B46B2EE001A8B96 /* NepaliCalendarTests.m */,
 				DDB22C3D1B46B2EE001A8B96 /* Supporting Files */,
 			);
@@ -147,6 +159,15 @@
 				DDB22C5C1B46BA05001A8B96 /* NSString+NepaliNumber.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		DDB22C631B46C5CD001A8B96 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DDB22C641B46C5F0001A8B96 /* TextConverterVC.h */,
+				DDB22C651B46C5F0001A8B96 /* TextConverterVC.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +272,7 @@
 			files = (
 				DDB22C4E1B46B3F2001A8B96 /* main.m in Sources */,
 				DDB22C4D1B46B3F2001A8B96 /* AppDelegate.m in Sources */,
+				DDB22C661B46C5F0001A8B96 /* TextConverterVC.m in Sources */,
 				DDB22C5D1B46BA05001A8B96 /* NSString+NepaliNumber.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +282,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDB22C401B46B2EE001A8B96 /* NepaliCalendarTests.m in Sources */,
+				DDB22C6B1B46C763001A8B96 /* TestNumberConverter.m in Sources */,
+				DDB22C6A1B46C763001A8B96 /* FakeTextContainer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

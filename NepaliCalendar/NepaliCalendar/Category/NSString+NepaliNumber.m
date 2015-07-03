@@ -10,12 +10,12 @@
 
 @implementation NSString (NepaliNumber)
 
-- (NSString *) string2NepaliNumber {
-    NSString *finalString = [self convert2NepaliString:self];
+- (NSString *)stringToNepaliNumber {
+    NSString *finalString = [self convertToNepaliString:self];
     return finalString;
 }
 
-- (NSString *)convert2NepaliString:(NSString *)numberValue {
+- (NSString *)convertToNepaliString:(NSString *)numberValue {
     NSString *nepaliValue = [[NSString alloc] init];
     NSUInteger charLength = numberValue.length;
     @try {
