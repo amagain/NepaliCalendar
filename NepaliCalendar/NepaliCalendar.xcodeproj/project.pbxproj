@@ -21,6 +21,8 @@
 		DDB22C711B46E648001A8B96 /* NSNumber+NepaliDay.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C701B46E648001A8B96 /* NSNumber+NepaliDay.m */; };
 		DDB22C731B46F1A2001A8B96 /* TestMonthNameConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C721B46F1A2001A8B96 /* TestMonthNameConverter.m */; };
 		DDB22C751B46FC36001A8B96 /* TestDayNameConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C741B46FC36001A8B96 /* TestDayNameConverter.m */; };
+		DDB22C7A1B4717CB001A8B96 /* NepaliMonthsData.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C771B4717CB001A8B96 /* NepaliMonthsData.m */; };
+		DDB22C7B1B4717CB001A8B96 /* SGNepaliDateConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C791B4717CB001A8B96 /* SGNepaliDateConverter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,10 @@
 		DDB22C701B46E648001A8B96 /* NSNumber+NepaliDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+NepaliDay.m"; sourceTree = "<group>"; };
 		DDB22C721B46F1A2001A8B96 /* TestMonthNameConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMonthNameConverter.m; sourceTree = "<group>"; };
 		DDB22C741B46FC36001A8B96 /* TestDayNameConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDayNameConverter.m; sourceTree = "<group>"; };
+		DDB22C761B4717CB001A8B96 /* NepaliMonthsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NepaliMonthsData.h; sourceTree = "<group>"; };
+		DDB22C771B4717CB001A8B96 /* NepaliMonthsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NepaliMonthsData.m; sourceTree = "<group>"; };
+		DDB22C781B4717CB001A8B96 /* SGNepaliDateConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGNepaliDateConverter.h; sourceTree = "<group>"; };
+		DDB22C791B4717CB001A8B96 /* SGNepaliDateConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGNepaliDateConverter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +166,10 @@
 		DDB22C591B46B9DF001A8B96 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DDB22C761B4717CB001A8B96 /* NepaliMonthsData.h */,
+				DDB22C771B4717CB001A8B96 /* NepaliMonthsData.m */,
+				DDB22C781B4717CB001A8B96 /* SGNepaliDateConverter.h */,
+				DDB22C791B4717CB001A8B96 /* SGNepaliDateConverter.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -287,7 +297,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDB22C4E1B46B3F2001A8B96 /* main.m in Sources */,
+				DDB22C7A1B4717CB001A8B96 /* NepaliMonthsData.m in Sources */,
 				DDB22C711B46E648001A8B96 /* NSNumber+NepaliDay.m in Sources */,
+				DDB22C7B1B4717CB001A8B96 /* SGNepaliDateConverter.m in Sources */,
 				DDB22C4D1B46B3F2001A8B96 /* AppDelegate.m in Sources */,
 				DDB22C6E1B46E4D4001A8B96 /* NSNumber+NepaliMonth.m in Sources */,
 				DDB22C661B46C5F0001A8B96 /* TextConverterVC.m in Sources */,
