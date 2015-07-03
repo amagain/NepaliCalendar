@@ -9,6 +9,8 @@
 #import "TextConverterVC.h"
 // Category
 #import "NSString+NepaliNumber.h"
+#import "NSNumber+NepaliDay.h"
+#import "NSNumber+NepaliMonth.h"
 
 @interface TextConverterVC ()
 
@@ -21,7 +23,9 @@
 }
 
 - (void)convertNumber {
-    self.nepaliLabel.text = [self.englishTextField.text stringToNepaliNumber];
+    self.nepaliLabel.text   = [self.englishTextField.text stringToNepaliNumber];
+    self.nepaliDay.text     = [@([self.englishTextField.text integerValue]) nepaliDayForNumber];
+    self.nepaliMonth.text   = [@([self.englishTextField.text integerValue]) nepaliMonthForNumber];
 }
 
 - (void)viewDidLoad {

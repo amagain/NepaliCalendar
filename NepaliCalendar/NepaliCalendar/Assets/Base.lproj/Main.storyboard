@@ -41,8 +41,38 @@
                                     <action selector="convertButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pW8-IS-Guk"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Output" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQ9-NQ-ceS">
-                                <rect key="frame" x="16" y="181" width="568" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nepali String" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQ9-NQ-ceS">
+                                <rect key="frame" x="485" y="181" width="99" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nepali String" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Td3-aj-3kv">
+                                <rect key="frame" x="16" y="181" width="99" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nepali Day" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9j-aV-bWB">
+                                <rect key="frame" x="16" y="209.5" width="83.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nepali Month" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzR-Af-zv9">
+                                <rect key="frame" x="16" y="238" width="103" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nepali Day" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qj4-s4-kKo">
+                                <rect key="frame" x="500.5" y="209" width="83.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nepali Month" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="god-aA-5Ju">
+                                <rect key="frame" x="481" y="238.5" width="103" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -52,21 +82,32 @@
                         <constraints>
                             <constraint firstItem="MVF-ML-4aO" firstAttribute="top" secondItem="E3e-aQ-UEM" secondAttribute="bottom" constant="12.5" id="1Oi-tP-RBz"/>
                             <constraint firstItem="E3e-aQ-UEM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="3pM-vC-GGk"/>
-                            <constraint firstItem="lQ9-NQ-ceS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="46M-vU-dyC"/>
+                            <constraint firstItem="Td3-aj-3kv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="5i8-eN-Xxb"/>
+                            <constraint firstItem="tzR-Af-zv9" firstAttribute="top" secondItem="d9j-aV-bWB" secondAttribute="bottom" constant="8" id="74J-TI-ERf"/>
+                            <constraint firstItem="Qj4-s4-kKo" firstAttribute="top" secondItem="lQ9-NQ-ceS" secondAttribute="bottom" constant="7.5" id="9wE-8U-Ali"/>
+                            <constraint firstItem="god-aA-5Ju" firstAttribute="top" secondItem="Qj4-s4-kKo" secondAttribute="bottom" constant="9" id="Dw2-8T-1Zy"/>
+                            <constraint firstItem="tzR-Af-zv9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="EU9-ZI-hw3"/>
+                            <constraint firstItem="Td3-aj-3kv" firstAttribute="top" secondItem="MVF-ML-4aO" secondAttribute="bottom" constant="24" id="EYN-Yn-OHo"/>
                             <constraint firstItem="E3e-aQ-UEM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="EaV-dH-t5L"/>
-                            <constraint firstItem="lQ9-NQ-ceS" firstAttribute="top" secondItem="MVF-ML-4aO" secondAttribute="bottom" constant="24" id="GfE-on-Ucw"/>
+                            <constraint firstItem="d9j-aV-bWB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="GKh-pu-vA6"/>
+                            <constraint firstItem="d9j-aV-bWB" firstAttribute="top" secondItem="Td3-aj-3kv" secondAttribute="bottom" constant="8" id="H4W-HT-dTo"/>
                             <constraint firstItem="XZF-8p-K0L" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="IS2-UQ-tW8"/>
+                            <constraint firstAttribute="trailing" secondItem="lQ9-NQ-ceS" secondAttribute="trailing" constant="16" id="Xhb-43-SJB"/>
                             <constraint firstAttribute="trailing" secondItem="XZF-8p-K0L" secondAttribute="trailing" constant="16" id="aan-SH-Oza"/>
                             <constraint firstAttribute="trailing" secondItem="MVF-ML-4aO" secondAttribute="trailing" constant="16" id="bcD-AY-Dx9"/>
                             <constraint firstItem="MVF-ML-4aO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="eby-bP-yKV"/>
-                            <constraint firstItem="lQ9-NQ-ceS" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="nWY-IE-5zT"/>
+                            <constraint firstAttribute="trailing" secondItem="Qj4-s4-kKo" secondAttribute="trailing" constant="16" id="pTq-IR-jG6"/>
                             <constraint firstItem="E3e-aQ-UEM" firstAttribute="top" secondItem="XZF-8p-K0L" secondAttribute="bottom" constant="35" id="ryI-m0-k6F"/>
                             <constraint firstItem="XZF-8p-K0L" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="u1a-mp-Ykq"/>
+                            <constraint firstAttribute="trailing" secondItem="god-aA-5Ju" secondAttribute="trailing" constant="16" id="wEG-OY-1I0"/>
+                            <constraint firstItem="lQ9-NQ-ceS" firstAttribute="top" secondItem="MVF-ML-4aO" secondAttribute="bottom" constant="24" id="xrZ-8z-PPS"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="englishTextField" destination="E3e-aQ-UEM" id="tUV-8z-kXF"/>
+                        <outlet property="nepaliDay" destination="Qj4-s4-kKo" id="pzT-NA-KGT"/>
                         <outlet property="nepaliLabel" destination="lQ9-NQ-ceS" id="pBP-Ub-Nv2"/>
+                        <outlet property="nepaliMonth" destination="god-aA-5Ju" id="xa0-8K-DrB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

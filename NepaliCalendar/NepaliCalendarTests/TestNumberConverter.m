@@ -17,7 +17,7 @@
 @interface TestNumberConverter : XCTestCase
 
 @property (strong, nonatomic) TextConverterVC   *textConverterVC;
-@property (nonatomic, strong) FakeTextContainer *englishTextField;
+@property (strong, nonatomic) FakeTextContainer *englishTextField;
 @property (strong, nonatomic) FakeTextContainer *nepaliLabel;
 
 @end
@@ -95,8 +95,17 @@
     XCTAssertEqualObjects(self.nepaliLabel.text, @"०", @"Converter of English Number 0 should return ०");
 }
 
+- (void)testOneNotTwo {
+    self.englishTextField.text = @"1";
+    [self.textConverterVC convertNumber];
+    XCTAssertNotEqual(self.nepaliLabel.text, @"२", @"Converter of English Number 0 should not return २");
+}
 
-
+- (void)testConbinationTextTest {
+    self.englishTextField.text = @"12";
+    [self.textConverterVC convertNumber];
+    XCTAssertEqualObjects(self.nepaliLabel.text, @"१२", @"Convert of Englsih Number 12 should should return १२");
+}
 
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.

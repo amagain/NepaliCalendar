@@ -17,6 +17,9 @@
 		DDB22C661B46C5F0001A8B96 /* TextConverterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C651B46C5F0001A8B96 /* TextConverterVC.m */; };
 		DDB22C6A1B46C763001A8B96 /* FakeTextContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C681B46C763001A8B96 /* FakeTextContainer.m */; };
 		DDB22C6B1B46C763001A8B96 /* TestNumberConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C691B46C763001A8B96 /* TestNumberConverter.m */; };
+		DDB22C6E1B46E4D4001A8B96 /* NSNumber+NepaliMonth.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C6D1B46E4D4001A8B96 /* NSNumber+NepaliMonth.m */; };
+		DDB22C711B46E648001A8B96 /* NSNumber+NepaliDay.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C701B46E648001A8B96 /* NSNumber+NepaliDay.m */; };
+		DDB22C731B46F1A2001A8B96 /* TestMonthNameConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C721B46F1A2001A8B96 /* TestMonthNameConverter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,11 @@
 		DDB22C671B46C763001A8B96 /* FakeTextContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeTextContainer.h; sourceTree = "<group>"; };
 		DDB22C681B46C763001A8B96 /* FakeTextContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeTextContainer.m; sourceTree = "<group>"; };
 		DDB22C691B46C763001A8B96 /* TestNumberConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNumberConverter.m; sourceTree = "<group>"; };
+		DDB22C6C1B46E4D4001A8B96 /* NSNumber+NepaliMonth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+NepaliMonth.h"; sourceTree = "<group>"; };
+		DDB22C6D1B46E4D4001A8B96 /* NSNumber+NepaliMonth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+NepaliMonth.m"; sourceTree = "<group>"; };
+		DDB22C6F1B46E648001A8B96 /* NSNumber+NepaliDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+NepaliDay.h"; sourceTree = "<group>"; };
+		DDB22C701B46E648001A8B96 /* NSNumber+NepaliDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+NepaliDay.m"; sourceTree = "<group>"; };
+		DDB22C721B46F1A2001A8B96 /* TestMonthNameConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMonthNameConverter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				DDB22C691B46C763001A8B96 /* TestNumberConverter.m */,
+				DDB22C721B46F1A2001A8B96 /* TestMonthNameConverter.m */,
 				DDB22C671B46C763001A8B96 /* FakeTextContainer.h */,
 				DDB22C681B46C763001A8B96 /* FakeTextContainer.m */,
 				DDB22C3F1B46B2EE001A8B96 /* NepaliCalendarTests.m */,
@@ -157,6 +166,10 @@
 			children = (
 				DDB22C5B1B46BA05001A8B96 /* NSString+NepaliNumber.h */,
 				DDB22C5C1B46BA05001A8B96 /* NSString+NepaliNumber.m */,
+				DDB22C6C1B46E4D4001A8B96 /* NSNumber+NepaliMonth.h */,
+				DDB22C6D1B46E4D4001A8B96 /* NSNumber+NepaliMonth.m */,
+				DDB22C6F1B46E648001A8B96 /* NSNumber+NepaliDay.h */,
+				DDB22C701B46E648001A8B96 /* NSNumber+NepaliDay.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -271,7 +284,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDB22C4E1B46B3F2001A8B96 /* main.m in Sources */,
+				DDB22C711B46E648001A8B96 /* NSNumber+NepaliDay.m in Sources */,
 				DDB22C4D1B46B3F2001A8B96 /* AppDelegate.m in Sources */,
+				DDB22C6E1B46E4D4001A8B96 /* NSNumber+NepaliMonth.m in Sources */,
 				DDB22C661B46C5F0001A8B96 /* TextConverterVC.m in Sources */,
 				DDB22C5D1B46BA05001A8B96 /* NSString+NepaliNumber.m in Sources */,
 			);
@@ -283,6 +298,7 @@
 			files = (
 				DDB22C401B46B2EE001A8B96 /* NepaliCalendarTests.m in Sources */,
 				DDB22C6B1B46C763001A8B96 /* TestNumberConverter.m in Sources */,
+				DDB22C731B46F1A2001A8B96 /* TestMonthNameConverter.m in Sources */,
 				DDB22C6A1B46C763001A8B96 /* FakeTextContainer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

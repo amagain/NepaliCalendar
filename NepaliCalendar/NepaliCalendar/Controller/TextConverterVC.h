@@ -11,6 +11,8 @@
 @interface TextConverterVC : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel     *nepaliLabel;
+@property (weak, nonatomic) IBOutlet UILabel     *nepaliDay;
+@property (weak, nonatomic) IBOutlet UILabel     *nepaliMonth;
 @property (weak, nonatomic) IBOutlet UITextField *englishTextField;
 
 - (void)convertNumber;
