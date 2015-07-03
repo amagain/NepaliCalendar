@@ -22,6 +22,8 @@
                                 ];
     if (self.integerValue > [nepaliDaysName count]) {
         return [nepaliDaysName lastObject];
+    } else if (self.integerValue <= 0 ) {
+        return [nepaliDaysName firstObject];
     }
     return [nepaliDaysName objectAtIndex:(self.integerValue - 1)];
 }

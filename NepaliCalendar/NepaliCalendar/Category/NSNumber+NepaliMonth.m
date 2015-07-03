@@ -27,6 +27,8 @@
                                           ];
     if (self.integerValue > [nepaliMonthsNameInNepali count]) {
         return [nepaliMonthsNameInNepali lastObject];
+    } else if (self.integerValue <= 0) {
+        return [nepaliMonthsNameInNepali firstObject];
     }
     return [nepaliMonthsNameInNepali objectAtIndex:(self.integerValue -1)];;
 }

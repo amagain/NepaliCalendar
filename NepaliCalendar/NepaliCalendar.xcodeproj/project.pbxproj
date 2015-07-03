@@ -20,6 +20,7 @@
 		DDB22C6E1B46E4D4001A8B96 /* NSNumber+NepaliMonth.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C6D1B46E4D4001A8B96 /* NSNumber+NepaliMonth.m */; };
 		DDB22C711B46E648001A8B96 /* NSNumber+NepaliDay.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C701B46E648001A8B96 /* NSNumber+NepaliDay.m */; };
 		DDB22C731B46F1A2001A8B96 /* TestMonthNameConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C721B46F1A2001A8B96 /* TestMonthNameConverter.m */; };
+		DDB22C751B46FC36001A8B96 /* TestDayNameConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C741B46FC36001A8B96 /* TestDayNameConverter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		DDB22C6F1B46E648001A8B96 /* NSNumber+NepaliDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+NepaliDay.h"; sourceTree = "<group>"; };
 		DDB22C701B46E648001A8B96 /* NSNumber+NepaliDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+NepaliDay.m"; sourceTree = "<group>"; };
 		DDB22C721B46F1A2001A8B96 /* TestMonthNameConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMonthNameConverter.m; sourceTree = "<group>"; };
+		DDB22C741B46FC36001A8B96 /* TestDayNameConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDayNameConverter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				DDB22C691B46C763001A8B96 /* TestNumberConverter.m */,
 				DDB22C721B46F1A2001A8B96 /* TestMonthNameConverter.m */,
+				DDB22C741B46FC36001A8B96 /* TestDayNameConverter.m */,
 				DDB22C671B46C763001A8B96 /* FakeTextContainer.h */,
 				DDB22C681B46C763001A8B96 /* FakeTextContainer.m */,
 				DDB22C3F1B46B2EE001A8B96 /* NepaliCalendarTests.m */,
@@ -299,6 +302,7 @@
 				DDB22C401B46B2EE001A8B96 /* NepaliCalendarTests.m in Sources */,
 				DDB22C6B1B46C763001A8B96 /* TestNumberConverter.m in Sources */,
 				DDB22C731B46F1A2001A8B96 /* TestMonthNameConverter.m in Sources */,
+				DDB22C751B46FC36001A8B96 /* TestDayNameConverter.m in Sources */,
 				DDB22C6A1B46C763001A8B96 /* FakeTextContainer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
