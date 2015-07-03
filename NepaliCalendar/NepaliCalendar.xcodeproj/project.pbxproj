@@ -14,6 +14,8 @@
 		DDB22C311B46B2EE001A8B96 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB22C301B46B2EE001A8B96 /* Images.xcassets */; };
 		DDB22C341B46B2EE001A8B96 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB22C321B46B2EE001A8B96 /* LaunchScreen.xib */; };
 		DDB22C401B46B2EE001A8B96 /* NepaliCalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C3F1B46B2EE001A8B96 /* NepaliCalendarTests.m */; };
+		DDB22C5F1B46BFD9001A8B96 /* TestConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C5E1B46BFD9001A8B96 /* TestConverter.m */; };
+		DDB22C621B46C41C001A8B96 /* FakeTextContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C611B46C41C001A8B96 /* FakeTextContainer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		DDB22C391B46B2EE001A8B96 /* NepaliCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NepaliCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB22C3E1B46B2EE001A8B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDB22C3F1B46B2EE001A8B96 /* NepaliCalendarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NepaliCalendarTests.m; sourceTree = "<group>"; };
+		DDB22C5E1B46BFD9001A8B96 /* TestConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestConverter.m; sourceTree = "<group>"; };
+		DDB22C601B46C41C001A8B96 /* FakeTextContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeTextContainer.h; sourceTree = "<group>"; };
+		DDB22C611B46C41C001A8B96 /* FakeTextContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeTextContainer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +110,9 @@
 		DDB22C3C1B46B2EE001A8B96 /* NepaliCalendarTests */ = {
 			isa = PBXGroup;
 			children = (
+				DDB22C601B46C41C001A8B96 /* FakeTextContainer.h */,
+				DDB22C611B46C41C001A8B96 /* FakeTextContainer.m */,
+				DDB22C5E1B46BFD9001A8B96 /* TestConverter.m */,
 				DDB22C3F1B46B2EE001A8B96 /* NepaliCalendarTests.m */,
 				DDB22C3D1B46B2EE001A8B96 /* Supporting Files */,
 			);
@@ -229,7 +237,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDB22C5F1B46BFD9001A8B96 /* TestConverter.m in Sources */,
 				DDB22C401B46B2EE001A8B96 /* NepaliCalendarTests.m in Sources */,
+				DDB22C621B46C41C001A8B96 /* FakeTextContainer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +428,7 @@
 				DDB22C451B46B2EE001A8B96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DDB22C461B46B2EE001A8B96 /* Build configuration list for PBXNativeTarget "NepaliCalendarTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +437,7 @@
 				DDB22C481B46B2EE001A8B96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
