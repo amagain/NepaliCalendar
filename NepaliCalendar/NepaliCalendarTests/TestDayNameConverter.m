@@ -18,7 +18,7 @@
 
 @property (strong, nonatomic) TextConverterVC   *textConverterVC;
 @property (strong, nonatomic) FakeTextContainer *englishTextField;
-@property (strong, nonatomic) FakeTextContainer *nepaliMonthLabel;
+@property (strong, nonatomic) FakeTextContainer *nepaliDayLabel;
 
 @end
 
@@ -30,13 +30,53 @@
     
     self.textConverterVC    = [[TextConverterVC alloc] init];
     self.englishTextField   = [[FakeTextContainer alloc] init];
-    self.nepaliMonthLabel   = [[FakeTextContainer alloc] init];
+    self.nepaliDayLabel     = [[FakeTextContainer alloc] init];
     
-    self.textConverterVC.nepaliMonth        = (UILabel *)self.nepaliMonthLabel;
+    self.textConverterVC.nepaliDay          = (UILabel *)self.nepaliDayLabel;
     self.textConverterVC.englishTextField   = (UITextField *)self.englishTextField;
 }
 
+- (void)testSunday {
+    self.englishTextField.text = @"1";
+    [self.textConverterVC convertNumber];
+    XCTAssertEqualObjects(self.nepaliDayLabel.text, @"आइतवार", @"1st Day (Sunday) of Nepali should be आइतवार");
+}
 
+- (void)testMonday {
+    self.englishTextField.text = @"2";
+    [self.textConverterVC convertNumber];
+    XCTAssertEqualObjects(self.nepaliDayLabel.text, @"सोमवार", @"2nd Day (Monday) of Nepali should be सोमवार");
+}
+
+- (void)testTuesday {
+    self.englishTextField.text = @"3";
+    [self.textConverterVC convertNumber];
+    XCTAssertEqualObjects(self.nepaliDayLabel.text, @"मङ्लबार", @"3rd Day (Tuesday) of Nepali should be मङ्लबार");
+}
+
+- (void)testWenesday {
+    self.englishTextField.text = @"4";
+    [self.textConverterVC convertNumber];
+    XCTAssertEqualObjects(self.nepaliDayLabel.text, @"बुधबार", @"4th Day (Wenesday) of Nepali should be बुधबार");
+}
+
+- (void)testThursday {
+    self.englishTextField.text = @"5";
+    [self.textConverterVC convertNumber];
+    XCTAssertEqualObjects(self.nepaliDayLabel.text, @"बिहिबार", @"5th Day (Thursday) of Nepali should be बिहिबार");
+}
+
+- (void)testFriday {
+    self.englishTextField.text = @"6";
+    [self.textConverterVC convertNumber];
+    XCTAssertEqualObjects(self.nepaliDayLabel.text, @"शुक्रबार", @"6th Day (Friday) of Nepali should be शुक्रबार");
+}
+
+- (void)testSaturday {
+    self.englishTextField.text = @"7";
+    [self.textConverterVC convertNumber];
+    XCTAssertEqualObjects(self.nepaliDayLabel.text, @"शनिबार", @"7th Day (Saturday) of Nepali should be शनिबार");
+}
 
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
