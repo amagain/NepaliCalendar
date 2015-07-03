@@ -7,8 +7,12 @@
 //
 
 #import "DateConverterTesterVC.h"
+#import "SGNepaliDateConverter.h"
 
 @interface DateConverterTesterVC ()
+@property (strong, nonatomic) IBOutlet UITextField *englishDateTextField;
+@property (strong, nonatomic) IBOutlet UITextField *nepaliDateTextField;
+- (IBAction)convertEnglishToNepali:(id)sender;
 
 @end
 
@@ -24,14 +28,30 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)convertEnglishToNepali:(id)sender {
+    // dd/mm/yy
+    NSString *nepaliDateString = self.nepaliDateTextField.text;
+    NSLog(@"%@", nepaliDateString);
+    NSDateFormatter * dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    NSDate *dateNotFormatted = [dateFormatter dateFromString:nepaliDateString];
+    [dateFormatter setDateFormat:@"d MMM.YYYY"];
+    NSString * dateFormatted = [dateFormatter stringFromDate:dateNotFormatted];
+    NSLog(@"%@", dateFormatted);
+    
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+    NSDateComponents* components = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:dateNotFormatted]; // Get necessary date components
+    
+    NSUInteger month = [components month]; //gives you month
+    NSUInteger day = [components day]; //gives you day
+    NSUInteger year = [components year]; // gives
+    
+    SGNepaliDateConverter *converter = [[SGNepaliDateConverter alloc] init];
+    NSMutableDictionary *nepaliDate = [converter convertEnglishDateToNepaliWithYear:year month:month andDay:day];
+    NSMutableDictionary *englishDate = [converter convertNepaliDateToEnglishWithYear:year month:month andDay:day];
+    NSUInteger nepaliYear = [[nepaliDate objectForKey:@"year"] integerValue];
+    NSLog(@"NEPALI YEAR : %lu", (unsigned long)nepaliYear);
+    
+    
 }
-*/
-
 @end

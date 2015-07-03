@@ -12,7 +12,7 @@
 @interface SGNepaliDateConverter()
 
 @property (strong, nonatomic) NSArray *englishDaysNameArray;
-@property (strong, nonatomic) NSArray *nepaliMonthsNameInNepaliArray;
+@property (strong,nonatomic) NSArray *nepaliMonthsNameInNepaliArray;
 @property (strong, nonatomic) NSArray *nepaliDaysNameInNepaliArray;
 @property (strong, nonatomic) NSDictionary *numbersMappingEnglishToNepaliDict;
 @property (strong, nonatomic) NSMutableDictionary *nepaliDateComponents;
@@ -50,16 +50,16 @@
     self.nepaliDaysNameInNepaliArray = [[NSArray alloc] initWithArray:nepaliDaysNameInNepali];
     
     NSDictionary *numbersMappingEnglishToNepali = @{ @"0" : @"०",
-                                                    @"1" : @"१",
-                                                    @"2" : @"२",
-                                                    @"3" : @"३",
-                                                    @"4" : @"४",
-                                                    @"5" : @"५",
-                                                    @"6" : @"६",
-                                                    @"7" : @"७",
-                                                    @"8" : @"८",
-                                                    @"9" : @"९"
-                                                    };
+                                                     @"1" : @"१",
+                                                     @"2" : @"२",
+                                                     @"3" : @"३",
+                                                     @"4" : @"४",
+                                                     @"5" : @"५",
+                                                     @"6" : @"६",
+                                                     @"7" : @"७",
+                                                     @"8" : @"८",
+                                                     @"9" : @"९"
+                                                     };
     self.numbersMappingEnglishToNepaliDict = [[NSDictionary alloc] initWithDictionary:numbersMappingEnglishToNepali];
     NSDictionary *nepaliDateComponents = @{ @"year" : @"", @"month" : @"", @"date" : @"", @"day" : @"", @"nmonth" : @"", @"num_day" : @"", @"nepali" : @YES};
     self.nepaliDateComponents = [[NSMutableDictionary alloc] initWithDictionary:nepaliDateComponents];
@@ -68,7 +68,6 @@
     self.englishDateComponents = [[NSMutableDictionary alloc] initWithDictionary:englishDateComponents];
     
     self.objNepaliMonthsData = [[NepaliMonthsData alloc] init];
-
     
     self.debugString = @"";
 }
@@ -97,18 +96,21 @@
                           andDay:(NSUInteger)day {
     if (year < 1944 || year > 2033) {
         self.debugString = @"Supported only between 1944-2022";
+        NSLog(@"%@", self.debugString);
         return NO;
     }
 				
     if (month < 1 || month > 12) {
         self.debugString = @"Error! value 1-12 only";
+        NSLog(@"%@", self.debugString);
         return NO;
     }
 				
     if (day < 1 || day > 31) {
         self.debugString = @"Error! value 1-31 only";
+        NSLog(@"%@", self.debugString);
         return NO;
-    }	
+    }
     
     return YES;
 }
@@ -129,10 +131,10 @@
     if(day < 1 || day > 32){
         self.debugString = @"Error! value 1-31 only";
         return NO;
-    }		
+    }
     
     return YES;
-   
+    
 }
 
 - (NSMutableDictionary *)convertEnglishDateToNepaliWithYear:(NSUInteger)engYear
@@ -143,13 +145,13 @@
     } else {
         
         // english month data.
-        NSArray *englishMonthsArray = @[ @31, @28, @31, @30, @31, @30, @31, @31, @30, @31, @30, @31];
+        NSArray *englishMonthsArray = @[ @31, @28, @31, @30, @31, @30, @31, @31, @30, @31, @30, @31 ];
         NSArray *englishLeapYearMonthsArray = @[ @31, @29, @31, @30, @31, @30, @31, @31, @30, @31, @30, @31 ];
         
-//        NSUInteger startEnglishYear = 1944;									//spear head english date...
-//        NSUInteger startNepaliYear = 2000;
-//        NSUInteger startNepaliMonth = 9;
-//        NSUInteger startNepaliDay = 17-1;		//spear head nepali date...
+        //        NSUInteger startEnglishYear = 1944;									//spear head english date...
+        //        NSUInteger startNepaliYear = 2000;
+        //        NSUInteger startNepaliMonth = 9;
+        //        NSUInteger startNepaliDay = 17-1;		//spear head nepali date...
         NSUInteger totalEnglishDays = 0;
         NSUInteger totalNepaliDays = 0;
         NSUInteger a=0; NSUInteger day = 7-1;		//all the initializations...
@@ -162,10 +164,11 @@
         // count total no. of days in-terms of year
         for(i = 0; i < (engYear - self.objNepaliMonthsData.startEnglishYear);  i++){
             //total days for month calculation...(english)
-            if([self isLeapYear:(self.objNepaliMonthsData.startEnglishYear + i)] == YES)
-                for(j = 0;  j < 12; j++)
+            if([self isLeapYear:(self.objNepaliMonthsData.startEnglishYear + i)] == YES) {
+                for(j = 0;  j < 12; j++) {
                     totalEnglishDays += [englishLeapYearMonthsArray[j] integerValue];
-            else
+                }
+            } else
                 for(j = 0; j < 12; j++)
                     totalEnglishDays += [englishMonthsArray[j] integerValue];
         }
@@ -181,7 +184,7 @@
         }
         
         // count total no. of days in-terms of date
-        totalEnglishDays += day;
+        totalEnglishDays += engDay;
         
         i = 0; j = self.objNepaliMonthsData.startNepaliMonth;
         totalNepaliDays = self.objNepaliMonthsData.startNepaliDay;
@@ -219,5 +222,77 @@
         return self.nepaliDateComponents;
     }
 }
+
+- (NSMutableDictionary *)convertNepaliDateToEnglishWithYear:(NSUInteger)nepaliYear month:(NSUInteger)nepaliMonth andDay:(NSUInteger)nepaliDay {
+    NSUInteger def_eyy = 1943	; NSUInteger def_emm=4 ; NSUInteger def_edd=14-1;		// init english date.
+    NSUInteger def_nyy = 2000; NSUInteger def_nmm = 1; NSUInteger def_ndd = 1;		// equivalent nepali date.
+    NSUInteger total_eDays=0; NSUInteger total_nDays=0; NSUInteger a=0; NSUInteger day=4-1;		// initializations...
+    NSUInteger m = 0; NSUInteger y = 0; NSUInteger i=0;
+    NSUInteger k = 0;	NSUInteger numDay = 0;
+    
+    NSArray *month = @[ @0, @31, @28, @31, @30, @31, @30, @31, @31, @30, @31, @30, @31 ];
+    NSArray *lmonth = @[ @0, @31, @29, @31, @30, @31, @30, @31, @31, @30, @31, @30, @31 ];
+    
+    if( [self isInRangeNepaliWithYear:nepaliYear month:nepaliMonth andDay:nepaliDay] == NO ){
+        return false;
+        
+    } else {
+        
+        // count total days in-terms of year
+        for(i=0; i<(nepaliYear - def_nyy); i++){
+            for(NSUInteger j=1; j<=12; j++){
+                total_nDays +=
+                [[self.objNepaliMonthsData.numberOfDaysInNepaliMonths objectForKey:[NSNumber numberWithInteger:k]][j] integerValue];
+            }
+            k++;
+        }
+        
+        // count total days in-terms of month
+        for(NSUInteger j = 1; j < nepaliMonth; j++) {
+            total_nDays += [[self.objNepaliMonthsData.numberOfDaysInNepaliMonths objectForKey:[NSNumber numberWithInteger:k]][j] integerValue];
+        }
+        
+        // count total days in-terms of dat
+        total_nDays += nepaliDay;
+        
+        //calculation of equivalent english date...
+        total_eDays = def_edd;
+        m = def_emm;
+        y = def_eyy;
+        while(total_nDays != 0){
+            if([self isLeapYear:y])
+            {
+                a = [lmonth[m] integerValue];
+            }
+            else
+            {
+                a = [month[m] integerValue];
+            }
+            total_eDays++;
+            day++;
+            if(total_eDays > a){
+                m++;
+                total_eDays = 1;
+                if(m > 12){
+                    y++;
+                    m = 1;
+                }
+            }
+            if(day > 7)
+                day = 1;
+            total_nDays--;	
+        }
+        numDay = day;
+        
+        self.englishDateComponents[@"year"] = [NSNumber numberWithInteger:y];
+        self.englishDateComponents[@"date"] = [NSNumber numberWithInteger:total_eDays];
+        self.englishDateComponents[@"day"] = [NSNumber numberWithInteger:day];
+        self.englishDateComponents[@"month"] = [NSNumber numberWithInteger:m];
+
+        
+        return self.englishDateComponents;
+    }
+}
+
 
 @end

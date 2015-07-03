@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FNt-zn-jmb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XY3-gZ-8sv">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
@@ -206,10 +206,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Date Converter TesterVC-->
         <scene sceneID="Wd2-EW-gJr">
             <objects>
-                <viewController id="XY3-gZ-8sv" sceneMemberID="viewController">
+                <viewController id="XY3-gZ-8sv" customClass="DateConverterTesterVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="obP-x5-BlT"/>
                         <viewControllerLayoutGuide type="bottom" id="sc6-ds-hGc"/>
@@ -218,18 +218,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="akK-7b-QSl">
-                                <rect key="frame" x="252" y="62" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Nepali Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="akK-7b-QSl">
+                                <rect key="frame" x="36" y="20" width="528" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Converted English Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aRH-Yx-BwL">
+                                <rect key="frame" x="36" y="88" width="528" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kfw-11-E5X">
+                                <rect key="frame" x="272" y="136" width="55" height="30"/>
+                                <state key="normal" title="Convert">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="convertEnglishToNepali:" destination="XY3-gZ-8sv" eventType="touchUpInside" id="ERU-Hj-gu1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="akK-7b-QSl" secondAttribute="trailing" constant="20" id="02K-X4-cUC"/>
+                            <constraint firstItem="aRH-Yx-BwL" firstAttribute="height" secondItem="akK-7b-QSl" secondAttribute="height" id="0bj-mn-CcG"/>
+                            <constraint firstItem="aRH-Yx-BwL" firstAttribute="width" secondItem="akK-7b-QSl" secondAttribute="width" id="HiC-XD-KT6"/>
+                            <constraint firstItem="Kfw-11-E5X" firstAttribute="top" secondItem="aRH-Yx-BwL" secondAttribute="bottom" constant="18" id="KXW-5v-v63"/>
+                            <constraint firstItem="aRH-Yx-BwL" firstAttribute="centerX" secondItem="akK-7b-QSl" secondAttribute="centerX" constant="0.5" id="Wu0-ck-FgF"/>
+                            <constraint firstAttribute="centerX" secondItem="Kfw-11-E5X" secondAttribute="centerX" id="ZPd-jI-9sJ"/>
+                            <constraint firstItem="akK-7b-QSl" firstAttribute="top" secondItem="ON8-0Y-BhH" secondAttribute="topMargin" constant="20" id="glu-Dq-qjd"/>
+                            <constraint firstItem="akK-7b-QSl" firstAttribute="leading" secondItem="ON8-0Y-BhH" secondAttribute="leadingMargin" constant="20" id="pcO-0w-caw"/>
+                            <constraint firstItem="aRH-Yx-BwL" firstAttribute="top" secondItem="akK-7b-QSl" secondAttribute="bottom" constant="38" id="xgu-od-quF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="englishDateTextField" destination="aRH-Yx-BwL" id="wQf-TO-qMN"/>
+                        <outlet property="nepaliDateTextField" destination="akK-7b-QSl" id="c2y-t1-Rvr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UAS-OJ-Jgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="349" y="939"/>
+            <point key="canvasLocation" x="361" y="952"/>
         </scene>
     </scenes>
 </document>

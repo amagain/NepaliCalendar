@@ -106,8 +106,8 @@
                                              @90 : @[ @2090, @30, @32, @31, @32, @31, @30, @30, @30, @29, @30, @30, @30 ]
                                              };
     self.numberOfDaysInNepaliMonths = [[NSDictionary alloc] initWithDictionary:nepaliMonthsDataDict];
+    
     self.startNepaliYear = 2000;
-    self.startEnglishYear = 1944;
     self.startNepaliMonth = 9;
     self.startNepaliDay = 17 - 1;
     return self;

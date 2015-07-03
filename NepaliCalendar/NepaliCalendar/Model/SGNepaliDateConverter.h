@@ -16,6 +16,8 @@
 @property (strong, nonatomic) NSArray *englishMonthsNameArray;
 @property (copy, nonatomic) NSString *debugString;
 - (BOOL)isLeapYear:(NSUInteger)year;
-- (NSArray *)convertEnglishDateToNepaliWithYear:(NSUInteger)year month:(NSUInteger)month andDay:(NSUInteger)day;
+- (NSMutableDictionary *)convertEnglishDateToNepaliWithYear:(NSUInteger)year month:(NSUInteger)month andDay:(NSUInteger)day;
+- (NSMutableDictionary *)convertNepaliDateToEnglishWithYear:(NSUInteger)year month:(NSUInteger)month andDay:(NSUInteger)day;
+
 
 @end
