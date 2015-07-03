@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DDB22C261B46B2EE001A8B96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C251B46B2EE001A8B96 /* main.m */; };
-		DDB22C291B46B2EE001A8B96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C281B46B2EE001A8B96 /* AppDelegate.m */; };
-		DDB22C2C1B46B2EE001A8B96 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C2B1B46B2EE001A8B96 /* ViewController.m */; };
-		DDB22C2F1B46B2EE001A8B96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB22C2D1B46B2EE001A8B96 /* Main.storyboard */; };
-		DDB22C311B46B2EE001A8B96 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB22C301B46B2EE001A8B96 /* Images.xcassets */; };
-		DDB22C341B46B2EE001A8B96 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB22C321B46B2EE001A8B96 /* LaunchScreen.xib */; };
 		DDB22C401B46B2EE001A8B96 /* NepaliCalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C3F1B46B2EE001A8B96 /* NepaliCalendarTests.m */; };
+		DDB22C4D1B46B3F2001A8B96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C4B1B46B3F2001A8B96 /* AppDelegate.m */; };
+		DDB22C4E1B46B3F2001A8B96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB22C4C1B46B3F2001A8B96 /* main.m */; };
+		DDB22C551B46B41D001A8B96 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB22C501B46B41D001A8B96 /* LaunchScreen.xib */; };
+		DDB22C561B46B41D001A8B96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB22C521B46B41D001A8B96 /* Main.storyboard */; };
+		DDB22C571B46B41D001A8B96 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB22C541B46B41D001A8B96 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,18 +27,15 @@
 
 /* Begin PBXFileReference section */
 		DDB22C201B46B2EE001A8B96 /* NepaliCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NepaliCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDB22C241B46B2EE001A8B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DDB22C251B46B2EE001A8B96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DDB22C271B46B2EE001A8B96 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		DDB22C281B46B2EE001A8B96 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DDB22C2A1B46B2EE001A8B96 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DDB22C2B1B46B2EE001A8B96 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		DDB22C2E1B46B2EE001A8B96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DDB22C301B46B2EE001A8B96 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		DDB22C331B46B2EE001A8B96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DDB22C391B46B2EE001A8B96 /* NepaliCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NepaliCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB22C3E1B46B2EE001A8B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDB22C3F1B46B2EE001A8B96 /* NepaliCalendarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NepaliCalendarTests.m; sourceTree = "<group>"; };
+		DDB22C4A1B46B3F2001A8B96 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DDB22C4B1B46B3F2001A8B96 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DDB22C4C1B46B3F2001A8B96 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DDB22C511B46B41D001A8B96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DDB22C531B46B41D001A8B96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DDB22C541B46B41D001A8B96 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,25 +77,10 @@
 		DDB22C221B46B2EE001A8B96 /* NepaliCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				DDB22C271B46B2EE001A8B96 /* AppDelegate.h */,
-				DDB22C281B46B2EE001A8B96 /* AppDelegate.m */,
-				DDB22C2A1B46B2EE001A8B96 /* ViewController.h */,
-				DDB22C2B1B46B2EE001A8B96 /* ViewController.m */,
-				DDB22C2D1B46B2EE001A8B96 /* Main.storyboard */,
-				DDB22C301B46B2EE001A8B96 /* Images.xcassets */,
-				DDB22C321B46B2EE001A8B96 /* LaunchScreen.xib */,
-				DDB22C231B46B2EE001A8B96 /* Supporting Files */,
+				DDB22C4F1B46B41D001A8B96 /* Assets */,
+				DDB22C491B46B3F2001A8B96 /* SupportingFiles */,
 			);
 			path = NepaliCalendar;
-			sourceTree = "<group>";
-		};
-		DDB22C231B46B2EE001A8B96 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				DDB22C241B46B2EE001A8B96 /* Info.plist */,
-				DDB22C251B46B2EE001A8B96 /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		DDB22C3C1B46B2EE001A8B96 /* NepaliCalendarTests */ = {
@@ -117,6 +98,26 @@
 				DDB22C3E1B46B2EE001A8B96 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DDB22C491B46B3F2001A8B96 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				DDB22C4A1B46B3F2001A8B96 /* AppDelegate.h */,
+				DDB22C4B1B46B3F2001A8B96 /* AppDelegate.m */,
+				DDB22C4C1B46B3F2001A8B96 /* main.m */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		DDB22C4F1B46B41D001A8B96 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				DDB22C501B46B41D001A8B96 /* LaunchScreen.xib */,
+				DDB22C521B46B41D001A8B96 /* Main.storyboard */,
+				DDB22C541B46B41D001A8B96 /* Images.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,9 +200,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDB22C2F1B46B2EE001A8B96 /* Main.storyboard in Resources */,
-				DDB22C341B46B2EE001A8B96 /* LaunchScreen.xib in Resources */,
-				DDB22C311B46B2EE001A8B96 /* Images.xcassets in Resources */,
+				DDB22C571B46B41D001A8B96 /* Images.xcassets in Resources */,
+				DDB22C551B46B41D001A8B96 /* LaunchScreen.xib in Resources */,
+				DDB22C561B46B41D001A8B96 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +220,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDB22C2C1B46B2EE001A8B96 /* ViewController.m in Sources */,
-				DDB22C291B46B2EE001A8B96 /* AppDelegate.m in Sources */,
-				DDB22C261B46B2EE001A8B96 /* main.m in Sources */,
+				DDB22C4E1B46B3F2001A8B96 /* main.m in Sources */,
+				DDB22C4D1B46B3F2001A8B96 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,20 +244,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DDB22C2D1B46B2EE001A8B96 /* Main.storyboard */ = {
+		DDB22C501B46B41D001A8B96 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DDB22C2E1B46B2EE001A8B96 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DDB22C321B46B2EE001A8B96 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DDB22C331B46B2EE001A8B96 /* Base */,
+				DDB22C511B46B41D001A8B96 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		DDB22C521B46B41D001A8B96 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDB22C531B46B41D001A8B96 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -349,9 +349,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = NepaliCalendar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -359,9 +362,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = NepaliCalendar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
