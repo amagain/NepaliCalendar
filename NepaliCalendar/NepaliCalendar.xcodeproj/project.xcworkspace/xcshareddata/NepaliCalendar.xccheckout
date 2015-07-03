@@ -7,18 +7,18 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>53C59C90-28BD-43DB-BE1E-DAD78D33B5B8</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>NepaliCalendar</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>00DB91513A9CF3C22CCFE3D23FE75048CD2E683D</key>
 		<string>github.com:shrsthakusal/NepaliCalendar.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>NepaliCalendar.xcodeproj/project.xcworkspace</string>
+	<string>NepaliCalendar/NepaliCalendar.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>00DB91513A9CF3C22CCFE3D23FE75048CD2E683D</key>
-		<string>../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:shrsthakusal/NepaliCalendar.git</string>
