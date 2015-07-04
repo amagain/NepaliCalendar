@@ -46,8 +46,8 @@
     NSUInteger year = [components year]; // gives
     
     NCNepaliDateConverter *converter = [[NCNepaliDateConverter alloc] init];
-    NSMutableDictionary *nepaliDate = [converter convertEnglishDateToNepaliWithYear:year month:month andDay:day];
-    NSMutableDictionary *englishDate = [converter convertNepaliDateToEnglishWithYear:year month:month andDay:day];
+    NSDictionary *nepaliDate = [converter convertEnglishDateToNepaliWithYear:year month:month andDay:day];
+    NSDictionary *englishDate = [converter convertNepaliDateToEnglishWithYear:year month:month andDay:day];
     englishDate = [converter translateRomanDateToNepali:dateNotFormatted];
     NSLog(@"%@", englishDate);
     for (NSString *key in englishDate) {

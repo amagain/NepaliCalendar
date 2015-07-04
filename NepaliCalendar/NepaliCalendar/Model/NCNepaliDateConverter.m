@@ -198,11 +198,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             NSNumber *key = [NSNumber numberWithInteger:i];
             NSArray *currentNepaliMonth = [self.objNepaliMonthsData.numberOfDaysInNepaliMonths objectForKey:key];
             NSNumber *numberOfDaysInCurrentMonth = currentNepaliMonth[j];
-<<<<<<< HEAD
-
-=======
-            
->>>>>>> 95fdd99fb23f194cd2251e83ed7aa38cf8634ebe
             a = [numberOfDaysInCurrentMonth integerValue];
             totalNepaliDays++;						//count the days
             day++;								//count the days interms of 7 days
@@ -266,11 +261,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 NSNumber *key = [NSNumber numberWithInteger:k];
                 NSArray *currentNepaliMonth = [self.objNepaliMonthsData.numberOfDaysInNepaliMonths objectForKey:key];
                 NSNumber *numberOfDaysInCurrentMonth = currentNepaliMonth[j];
-<<<<<<< HEAD
-
-=======
-                
->>>>>>> 95fdd99fb23f194cd2251e83ed7aa38cf8634ebe
                 totalNepaliDays += [numberOfDaysInCurrentMonth integerValue];
             }
             k++;
@@ -284,11 +274,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             NSNumber *numberOfDaysInCurrentMonth = currentNepaliMonth[j];
             
             totalNepaliDays += [numberOfDaysInCurrentMonth integerValue];
-<<<<<<< HEAD
-
-=======
-            
->>>>>>> 95fdd99fb23f194cd2251e83ed7aa38cf8634ebe
         }
         
         // count total days in-terms of dat
@@ -316,11 +301,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             }
             if(day > 7)
                 day = 1;
-<<<<<<< HEAD
-            totalNepaliDays--;	
-=======
             totalNepaliDays--;
->>>>>>> 95fdd99fb23f194cd2251e83ed7aa38cf8634ebe
         }
         numDay = day;
         
@@ -328,12 +309,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         self.englishDateComponents[@"date"] = [NSNumber numberWithInteger:totalEnglishDays];
         self.englishDateComponents[@"day"] = [NSNumber numberWithInteger:day];
         self.englishDateComponents[@"month"] = [NSNumber numberWithInteger:m];
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> 95fdd99fb23f194cd2251e83ed7aa38cf8634ebe
-        
         return self.englishDateComponents;
     }
 }
@@ -412,8 +387,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     return myNumber;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 95fdd99fb23f194cd2251e83ed7aa38cf8634ebe
 @end

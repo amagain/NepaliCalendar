@@ -29,7 +29,7 @@
 @property (copy, nonatomic) NSString *debugString;
 
 - (BOOL)isLeapYear:(NSUInteger)year;
-- (NSArray *)convertEnglishDateToNepaliWithYear:(NSUInteger)year month:(NSUInteger)month andDay:(NSUInteger)day;
+- (NSDictionary *)convertEnglishDateToNepaliWithYear:(NSUInteger)year month:(NSUInteger)month andDay:(NSUInteger)day;
 - (NSDictionary *)convertNepaliDateToEnglishWithYear:(NSUInteger)nepaliYear
                                                       month:(NSUInteger)nepaliMonth
                                                      andDay:(NSUInteger)nepaliDay;
