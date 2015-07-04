@@ -22,6 +22,15 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		95CF5F69E91A3B0CA35C6DDD /* Pods_NepaliCalendar_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09717DB9E064BC2F754CDA19 /* Pods_NepaliCalendar_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		DDCE97C21B478F8A00D3F8A9 /* FakeTextContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCE97BD1B478F8A00D3F8A9 /* FakeTextContainer.m */; };
+		DDCE97C31B478F8A00D3F8A9 /* NepaliCalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCE97BE1B478F8A00D3F8A9 /* NepaliCalendarTests.m */; };
+		DDCE97C41B478F8A00D3F8A9 /* TestDayNameConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCE97BF1B478F8A00D3F8A9 /* TestDayNameConverter.m */; };
+		DDCE97C51B478F8A00D3F8A9 /* TestMonthNameConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCE97C01B478F8A00D3F8A9 /* TestMonthNameConverter.m */; };
+		DDCE97C61B478F8A00D3F8A9 /* TestNumberConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCE97C11B478F8A00D3F8A9 /* TestNumberConverter.m */; };
+		DDCE97D01B478FDD00D3F8A9 /* DateConverterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCE97C91B478FDD00D3F8A9 /* DateConverterVC.m */; };
+		DDCE97D11B478FDD00D3F8A9 /* NCNepaliCalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCE97CB1B478FDD00D3F8A9 /* NCNepaliCalendarVC.m */; };
+		DDCE97D21B478FDD00D3F8A9 /* NCNepaliMonthVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCE97CD1B478FDD00D3F8A9 /* NCNepaliMonthVC.m */; };
+		DDCE97D31B478FDD00D3F8A9 /* TextConverterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCE97CF1B478FDD00D3F8A9 /* TextConverterVC.m */; };
 		F53D20C2FEC57F2CD5684A16 /* Pods_NepaliCalendar_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04B3FBA78DD7057B9FA9709 /* Pods_NepaliCalendar_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -41,7 +50,7 @@
 		08923967915A584601AF7941 /* Pods-NepaliCalendar_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NepaliCalendar_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NepaliCalendar_Tests/Pods-NepaliCalendar_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		09717DB9E064BC2F754CDA19 /* Pods_NepaliCalendar_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NepaliCalendar_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA3ABCEBA0D6B65AA66E5A1 /* NepaliCalendar.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NepaliCalendar.podspec; path = ../NepaliCalendar.podspec; sourceTree = "<group>"; };
-		6003F58A195388D20070C39A /* NepaliCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = NepaliCalendar.app; path = NepaliCalendar_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58A195388D20070C39A /* NepaliCalendar_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NepaliCalendar_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -54,7 +63,7 @@
 		6003F5A5195388D20070C39A /* NCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCViewController.h; sourceTree = "<group>"; };
 		6003F5A6195388D20070C39A /* NCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6003F5AE195388D20070C39A /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = NepaliCalendar_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F5AE195388D20070C39A /* NepaliCalendar_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NepaliCalendar_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -64,6 +73,21 @@
 		92F15E39292CA437F2773347 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A04B3FBA78DD7057B9FA9709 /* Pods_NepaliCalendar_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NepaliCalendar_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F210ADD806821D407DBFBC /* Pods-NepaliCalendar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NepaliCalendar_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NepaliCalendar_Example/Pods-NepaliCalendar_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		DDCE97BA1B478C7600D3F8A9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		DDCE97BC1B478F8A00D3F8A9 /* FakeTextContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeTextContainer.h; sourceTree = "<group>"; };
+		DDCE97BD1B478F8A00D3F8A9 /* FakeTextContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeTextContainer.m; sourceTree = "<group>"; };
+		DDCE97BE1B478F8A00D3F8A9 /* NepaliCalendarTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NepaliCalendarTests.m; sourceTree = "<group>"; };
+		DDCE97BF1B478F8A00D3F8A9 /* TestDayNameConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDayNameConverter.m; sourceTree = "<group>"; };
+		DDCE97C01B478F8A00D3F8A9 /* TestMonthNameConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMonthNameConverter.m; sourceTree = "<group>"; };
+		DDCE97C11B478F8A00D3F8A9 /* TestNumberConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNumberConverter.m; sourceTree = "<group>"; };
+		DDCE97C81B478FDD00D3F8A9 /* DateConverterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateConverterVC.h; sourceTree = "<group>"; };
+		DDCE97C91B478FDD00D3F8A9 /* DateConverterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateConverterVC.m; sourceTree = "<group>"; };
+		DDCE97CA1B478FDD00D3F8A9 /* NCNepaliCalendarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCNepaliCalendarVC.h; sourceTree = "<group>"; };
+		DDCE97CB1B478FDD00D3F8A9 /* NCNepaliCalendarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCNepaliCalendarVC.m; sourceTree = "<group>"; };
+		DDCE97CC1B478FDD00D3F8A9 /* NCNepaliMonthVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCNepaliMonthVC.h; sourceTree = "<group>"; };
+		DDCE97CD1B478FDD00D3F8A9 /* NCNepaliMonthVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCNepaliMonthVC.m; sourceTree = "<group>"; };
+		DDCE97CE1B478FDD00D3F8A9 /* TextConverterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextConverterVC.h; sourceTree = "<group>"; };
+		DDCE97CF1B478FDD00D3F8A9 /* TextConverterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextConverterVC.m; sourceTree = "<group>"; };
 		FD9024510022706A21DAA76C /* Pods-NepaliCalendar_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NepaliCalendar_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NepaliCalendar_Tests/Pods-NepaliCalendar_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,8 +143,8 @@
 		6003F58B195388D20070C39A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6003F58A195388D20070C39A /* NepaliCalendar.app */,
-				6003F5AE195388D20070C39A /* Tests.xctest */,
+				6003F58A195388D20070C39A /* NepaliCalendar_Example.app */,
+				6003F5AE195388D20070C39A /* NepaliCalendar_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +152,7 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DDCE97BA1B478C7600D3F8A9 /* SenTestingKit.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
@@ -141,6 +166,7 @@
 		6003F593195388D20070C39A /* Example for NepaliCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				DDCE97C71B478FDD00D3F8A9 /* Controller */,
 				6003F59C195388D20070C39A /* NCAppDelegate.h */,
 				6003F59D195388D20070C39A /* NCAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -167,6 +193,12 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				DDCE97BC1B478F8A00D3F8A9 /* FakeTextContainer.h */,
+				DDCE97BD1B478F8A00D3F8A9 /* FakeTextContainer.m */,
+				DDCE97BE1B478F8A00D3F8A9 /* NepaliCalendarTests.m */,
+				DDCE97BF1B478F8A00D3F8A9 /* TestDayNameConverter.m */,
+				DDCE97C01B478F8A00D3F8A9 /* TestMonthNameConverter.m */,
+				DDCE97C11B478F8A00D3F8A9 /* TestNumberConverter.m */,
 				6003F5BB195388D20070C39A /* Tests.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
 			);
@@ -193,6 +225,21 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		DDCE97C71B478FDD00D3F8A9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DDCE97C81B478FDD00D3F8A9 /* DateConverterVC.h */,
+				DDCE97C91B478FDD00D3F8A9 /* DateConverterVC.m */,
+				DDCE97CA1B478FDD00D3F8A9 /* NCNepaliCalendarVC.h */,
+				DDCE97CB1B478FDD00D3F8A9 /* NCNepaliCalendarVC.m */,
+				DDCE97CC1B478FDD00D3F8A9 /* NCNepaliMonthVC.h */,
+				DDCE97CD1B478FDD00D3F8A9 /* NCNepaliMonthVC.m */,
+				DDCE97CE1B478FDD00D3F8A9 /* TextConverterVC.h */,
+				DDCE97CF1B478FDD00D3F8A9 /* TextConverterVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -213,7 +260,7 @@
 			);
 			name = NepaliCalendar_Example;
 			productName = NepaliCalendar;
-			productReference = 6003F58A195388D20070C39A /* NepaliCalendar.app */;
+			productReference = 6003F58A195388D20070C39A /* NepaliCalendar_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6003F5AD195388D20070C39A /* NepaliCalendar_Tests */ = {
@@ -234,7 +281,7 @@
 			);
 			name = NepaliCalendar_Tests;
 			productName = NepaliCalendarTests;
-			productReference = 6003F5AE195388D20070C39A /* Tests.xctest */;
+			productReference = 6003F5AE195388D20070C39A /* NepaliCalendar_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -392,7 +439,11 @@
 			files = (
 				6003F59E195388D20070C39A /* NCAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* NCViewController.m in Sources */,
+				DDCE97D11B478FDD00D3F8A9 /* NCNepaliCalendarVC.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				DDCE97D31B478FDD00D3F8A9 /* TextConverterVC.m in Sources */,
+				DDCE97D01B478FDD00D3F8A9 /* DateConverterVC.m in Sources */,
+				DDCE97D21B478FDD00D3F8A9 /* NCNepaliMonthVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +451,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDCE97C51B478F8A00D3F8A9 /* TestMonthNameConverter.m in Sources */,
+				DDCE97C41B478F8A00D3F8A9 /* TestDayNameConverter.m in Sources */,
 				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				DDCE97C31B478F8A00D3F8A9 /* NepaliCalendarTests.m in Sources */,
+				DDCE97C21B478F8A00D3F8A9 /* FakeTextContainer.m in Sources */,
+				DDCE97C61B478F8A00D3F8A9 /* TestNumberConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +492,7 @@
 /* Begin XCBuildConfiguration section */
 		6003F5BD195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2F210ADD806821D407DBFBC /* Pods-NepaliCalendar_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -467,7 +524,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -475,6 +532,7 @@
 		};
 		6003F5BE195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01391CE7C3C1749813A5166F /* Pods-NepaliCalendar_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -500,6 +558,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -512,6 +571,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NepaliCalendar/NepaliCalendar-Prefix.pch";
 				INFOPLIST_FILE = "NepaliCalendar/NepaliCalendar-Info.plist";
@@ -527,6 +590,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NepaliCalendar/NepaliCalendar-Prefix.pch";
 				INFOPLIST_FILE = "NepaliCalendar/NepaliCalendar-Info.plist";

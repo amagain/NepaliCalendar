@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  NepaliCalendar: 19166479e7a2251ba80ebe36efd79c01848a3954
+  NepaliCalendar: 1f97d3ac9469656d30f1a9f99459dd78db774863
 
 COCOAPODS: 0.37.2

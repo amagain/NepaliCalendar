@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5714B7CF62C61B81EC12C563"
+               BlueprintIdentifier = "FC541C5BB361BC31AA10F01B"
                BuildableName = "NepaliCalendar.bundle"
                BlueprintName = "Pods-NepaliCalendar_Example-NepaliCalendar-NepaliCalendar"
                ReferencedContainer = "container:Pods.xcodeproj">

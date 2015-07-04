@@ -1,6 +1,6 @@
 # NepaliCalendar
 
-[![CI Status](http://img.shields.io/travis/Bishal Ghimire/NepaliCalendar.svg?style=flat)](https://travis-ci.org/Bishal Ghimire/NepaliCalendar)
+[![CI Status](http://img.shields.io/travis/BishalGhimire/NepaliCalendar.svg?style=flat)](https://travis-ci.org/BishalGhimire/NepaliCalendar)
 [![Version](https://img.shields.io/cocoapods/v/NepaliCalendar.svg?style=flat)](http://cocoapods.org/pods/NepaliCalendar)
 [![License](https://img.shields.io/cocoapods/l/NepaliCalendar.svg?style=flat)](http://cocoapods.org/pods/NepaliCalendar)
 [![Platform](https://img.shields.io/cocoapods/p/NepaliCalendar.svg?style=flat)](http://cocoapods.org/pods/NepaliCalendar)
@@ -10,11 +10,12 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+iOS 7
 
 ## Installation
 
-NepaliCalendar is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+NepaliCalendar is available through [CocoaPods](http://cocoapods.org). 
+To install it, simply add the following line to your Podfile:
 
 ```ruby
 pod "NepaliCalendar"
@@ -22,7 +23,10 @@ pod "NepaliCalendar"
 
 ## Author
 
-Bishal Ghimire, bishal.ghimire@gmail.com
+- Bishal Ghimire, 
+- Kusal Shrestha,
+- Saugat Malla
+From Leapfrog Technology
 
 ## License
 
