@@ -51,7 +51,7 @@
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.frame collectionViewLayout:layout];
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
-    self.collectionView.backgroundColor = [UIColor redColor];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     self.collectionView.pagingEnabled = YES;
     [self addSubview:self.collectionView];
     
@@ -77,7 +77,8 @@
     if (indexPath.row >= self.startIndex - 1 && indexPath.row <= self.dayCount + self.startIndex - 2) {
         cell.label.text = [[NSString alloc] initWithFormat:@"%ld", indexPath.row - self.startIndex + 2];
     } else {
-        cell.label.text = @"-";
+        cell.backgroundColor = [UIColor whiteColor];
+        cell.label.text = @"";
     }
 
     return cell;
@@ -88,6 +89,7 @@
         self.headerView =
         (HeaderView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header" forIndexPath:indexPath];
         self.headerView.label.text = @"December";
+        self.headerView.backgroundColor = [UIColor grayColor];
         return self.headerView;
     }
     return nil;
@@ -107,7 +109,7 @@
 //interitem spacing
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
     
-    return kInterItemSpace;
+    return 0;
 }
 
 //line spacing

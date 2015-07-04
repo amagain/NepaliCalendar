@@ -80,7 +80,7 @@ NSInteger startIndex = 4;
     }
     NepaliCalendarView *calendar = [[NepaliCalendarView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width,  self.frame.size.width + 60) andStartIndex:startIndex andDayCount:monthDate];
     [cell.contentView addSubview:calendar];
-    cell.backgroundColor = [UIColor redColor];
+//    cell.backgroundColor = [UIColor redColor];
     
     //date flag for month key eg: 30
     dateFlag ++;
@@ -105,7 +105,7 @@ NSInteger startIndex = 4;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return nil;
+    return @"header";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
