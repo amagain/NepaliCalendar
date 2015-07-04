@@ -27,10 +27,7 @@
     dateFormatter.dateFormat = @"dd-MM-yyyy";
     NCNepaliDateConverter *converter = [[NCNepaliDateConverter alloc] init];
     NSDictionary *nepaliDateDict = [converter convertEnglishDateToNepaliWithDate:[NSDate date]];
-    NSString *day = [nepaliDateDict objectForKey:@"date"];
-    NSString *month = [nepaliDateDict objectForKey:@"month"];
-    NSString *year = [nepaliDateDict objectForKey:@"year"];
-    NSString *dateString = [NSString stringWithFormat:@"%@-%@-%@", day, month, year];
+     NSString *dateString = [self getFormattedDateStringFromDictionary:nepaliDateDict];
     self.dateStringLabel.text = dateString;
     [self.datePickerOutlet addTarget:self action:@selector(dateChange:)forControlEvents:UIControlEventValueChanged];
 
@@ -42,13 +39,16 @@
     [dateFormatter setDateFormat:@"dd-MM-yyyy"];
     NCNepaliDateConverter *converter = [[NCNepaliDateConverter alloc] init];
     NSDictionary *nepaliDateDict = [converter convertEnglishDateToNepaliWithDate:self.datePickerOutlet.date];
-    NSString *day = [nepaliDateDict objectForKey:@"date"];
-    NSString *month = [nepaliDateDict objectForKey:@"month"];
-    NSString *year = [nepaliDateDict objectForKey:@"year"];
-    NSString *dateString = [NSString stringWithFormat:@"%@-%@-%@", day, month, year];
+    NSString *dateString = [self getFormattedDateStringFromDictionary:nepaliDateDict];
     self.dateStringLabel.text = dateString;
+}
 
-//    self.datePickerOutlet.text=strDate;
+- (NSString *)getFormattedDateStringFromDictionary:(NSDictionary *)dateDictionary {
+    NSString *day = [dateDictionary objectForKey:@"date"];
+    NSString *month = [dateDictionary objectForKey:@"month"];
+    NSString *year = [dateDictionary objectForKey:@"year"];
+    NSString *dateString = [NSString stringWithFormat:@"Nepali Date: %@-%@-%@ BS", day, month, year];
+    return dateString;
 }
 
 - (void)didReceiveMemoryWarning {
