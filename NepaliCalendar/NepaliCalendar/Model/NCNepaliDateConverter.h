@@ -30,11 +30,11 @@
 
 - (BOOL)isLeapYear:(NSUInteger)year;
 - (NSArray *)convertEnglishDateToNepaliWithYear:(NSUInteger)year month:(NSUInteger)month andDay:(NSUInteger)day;
-- (NSMutableDictionary *)convertNepaliDateToEnglishWithYear:(NSUInteger)nepaliYear
+- (NSDictionary *)convertNepaliDateToEnglishWithYear:(NSUInteger)nepaliYear
                                                       month:(NSUInteger)nepaliMonth
                                                      andDay:(NSUInteger)nepaliDay;
-- (NSMutableDictionary *)convertNepaliDateToEnglishWithDate:(NSDate *)nepaliDate;
-- (NSMutableDictionary *)convertEnglishDateToNepaliWithDate:(NSDate *)englishDate;
+- (NSDictionary *)convertNepaliDateToEnglishWithDate:(NSDate *)nepaliDate;
+- (NSDictionary *)convertEnglishDateToNepaliWithDate:(NSDate *)englishDate;
 /**
  *  Returns a mutable dictionary conatining nepali date components.
  *
@@ -42,6 +42,6 @@
  *
  *  @return an NSMutableDictionary object that contains both the names and numbers of days, months and year in Nepali.
  */
-- (NSMutableDictionary *)translateRomanDateToNepali:(NSDate *)date;
+- (NSDictionary *)translateRomanDateToNepali:(NSDate *)date;
 
 @end

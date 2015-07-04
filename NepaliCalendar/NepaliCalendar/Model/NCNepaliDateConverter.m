@@ -143,7 +143,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     
 }
 
-- (NSMutableDictionary *)convertEnglishDateToNepaliWithYear:(NSUInteger)engYear
+- (NSDictionary *)convertEnglishDateToNepaliWithYear:(NSUInteger)engYear
                                                       month:(NSUInteger)engMonth
                                                      andDay:(NSUInteger)engDay {
     if ([self isInRangeEnglishWithYear:engYear month:engMonth andDay:engDay] == false){
@@ -229,7 +229,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     }
 }
 
-- (NSMutableDictionary *)convertNepaliDateToEnglishWithYear:(NSUInteger)nepaliYear
+- (NSDictionary *)convertNepaliDateToEnglishWithYear:(NSUInteger)nepaliYear
                                                       month:(NSUInteger)nepaliMonth
                                                      andDay:(NSUInteger)nepaliDay {
     
@@ -318,7 +318,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     }
 }
 
-- (NSMutableDictionary *)convertNepaliDateToEnglishWithDate:(NSDate *)nepaliDate {
+- (NSDictionary *)convertNepaliDateToEnglishWithDate:(NSDate *)nepaliDate {
     
     NSCalendar* calendar = [NSCalendar currentCalendar];
     NSDateComponents* components = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:nepaliDate];
@@ -327,13 +327,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     NSUInteger nepaliDay = [components day];
     NSUInteger nepaliYear = [components year];
     
-    NSMutableDictionary *englishDateDictionary = [[NSMutableDictionary alloc] init];
-    englishDateDictionary = [self convertNepaliDateToEnglishWithYear:nepaliYear month:nepaliMonth andDay:nepaliDay];
-    
-    return englishDateDictionary;
+    return  [self convertNepaliDateToEnglishWithYear:nepaliYear month:nepaliMonth andDay:nepaliDay];
 }
 
-- (NSMutableDictionary *)convertEnglishDateToNepaliWithDate:(NSDate *)englishDate {
+- (NSDictionary *)convertEnglishDateToNepaliWithDate:(NSDate *)englishDate {
     
     NSCalendar* calendar = [NSCalendar currentCalendar];
     NSDateComponents* components = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:englishDate];
@@ -342,10 +339,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     NSUInteger nepaliDay = [components day];
     NSUInteger nepaliYear = [components year];
     
-    NSMutableDictionary *nepaliDateDictionary = [[NSMutableDictionary alloc] init];
-    nepaliDateDictionary = [self convertNepaliDateToEnglishWithYear:nepaliYear month:nepaliMonth andDay:nepaliDay];
-    
-    return nepaliDateDictionary;
+    return [self convertNepaliDateToEnglishWithYear:nepaliYear month:nepaliMonth andDay:nepaliDay];
 }
 
 /**
@@ -355,7 +349,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
  *
  *  @return an NSMutableDictionary object that contains both the names and numbers of days, months and year in Nepali.
  */
-- (NSMutableDictionary *)translateRomanDateToNepali:(NSDate *)date {
+- (NSDictionary *)translateRomanDateToNepali:(NSDate *)date {
     
     NSCalendar* calendar = [NSCalendar currentCalendar];
     NSDateComponents* components = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:date];
