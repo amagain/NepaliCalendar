@@ -389,8 +389,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 - (NSUInteger)getWeekNumberOfEnglishDate:(NSDate *)englishDate {
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *comps = [calendar components:NSWeekdayCalendarUnit fromDate:englishDate];
-    NSUInteger weekday = [comps weekday];
+    NSDateComponents *components = [calendar components:NSWeekdayCalendarUnit fromDate:englishDate];
+    NSUInteger weekday = [components weekday];
     return weekday;
 }
 
