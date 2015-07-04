@@ -1,0 +1,14 @@
+PODS:
+  - NepaliCalendar (0.1.0)
+
+DEPENDENCIES:
+  - NepaliCalendar (from `../`)
+
+EXTERNAL SOURCES:
+  NepaliCalendar:
+    :path: ../
+
+SPEC CHECKSUMS:
+  NepaliCalendar: 19166479e7a2251ba80ebe36efd79c01848a3954
+
+COCOAPODS: 0.37.2

@@ -1,0 +1,6 @@
+framework module NepaliCalendar {
+  umbrella header "Pods-NepaliCalendar_Example-NepaliCalendar-umbrella.h"
+
+  export *
+  module * { export * }
+}

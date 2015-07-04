@@ -1,0 +1,6 @@
+framework module Pods_NepaliCalendar_Tests {
+  umbrella header "Pods-NepaliCalendar_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'NepaliCalendar_Example', :exclusive => true do
+  pod "NepaliCalendar", :path => "../"
+end
+
+target 'NepaliCalendar_Tests', :exclusive => true do
+  pod "NepaliCalendar", :path => "../"
+
+  
+end
