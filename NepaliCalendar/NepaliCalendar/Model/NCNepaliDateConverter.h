@@ -43,5 +43,9 @@
  *  @return an NSMutableDictionary object that contains both the names and numbers of days, months and year in Nepali.
  */
 - (NSDictionary *)translateRomanDateToNepali:(NSDate *)date;
+- (NSUInteger)getWeekNumberOfEnglishDate:(NSDate *)englishDate;
+- (NSUInteger)getWeekNumberOfNepaliDate:(NSDate *)nepaliDate;
+- (NSDate *)convertStringToDate:(NSString *)dateString;
+- (NSString *)convertDateToString:(NSDate *)date;
 
 @end

@@ -29,32 +29,28 @@
 
 - (IBAction)convertEnglishToNepali:(id)sender {
     // dd/mm/yy
-    NSString *nepaliDateString = self.nepaliDateTextField.text;
-    NSLog(@"%@", nepaliDateString);
-    NSDateFormatter * dateFormatter = [[NSDateFormatter alloc]init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
-    NSDate *dateNotFormatted = [dateFormatter dateFromString:nepaliDateString];
-    [dateFormatter setDateFormat:@"d MMM.YYYY"];
-    NSString * dateFormatted = [dateFormatter stringFromDate:dateNotFormatted];
-    NSLog(@"%@", dateFormatted);
-    
-    NSCalendar* calendar = [NSCalendar currentCalendar];
-    NSDateComponents* components = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:dateNotFormatted]; // Get necessary date components
-    
-    NSUInteger month = [components month]; //gives you month
-    NSUInteger day = [components day]; //gives you day
-    NSUInteger year = [components year]; // gives
-    
+    NSString *dateString = self.nepaliDateTextField.text;
     NCNepaliDateConverter *converter = [[NCNepaliDateConverter alloc] init];
-    NSDictionary *nepaliDate = [converter convertEnglishDateToNepaliWithYear:year month:month andDay:day];
-    NSDictionary *englishDate = [converter convertNepaliDateToEnglishWithYear:year month:month andDay:day];
-    englishDate = [converter translateRomanDateToNepali:dateNotFormatted];
-    NSLog(@"%@", englishDate);
-    for (NSString *key in englishDate) {
-        NSString *value = [englishDate objectForKey:key];
-        self.englishDateTextField.text = [[self.englishDateTextField.text stringByAppendingString:@", "] stringByAppendingString:value];
-    }
-    NSUInteger nepaliYear = [[nepaliDate objectForKey:@"year"] integerValue];
-    NSLog(@"NEPALI YEAR : %lu", (unsigned long)nepaliYear);
+    
+    NSDate *date = [converter convertStringToDate:dateString];
+    NSLog(@"String to Date : %@", date);
+    
+    NSLog(@"Date to String : %@", [converter convertDateToString:date]);
+    
+    NSLog(@"Date to Nepali : %@", [converter convertEnglishDateToNepaliWithDate:date]);
+    
+    NSLog(@"Date to English : %@", [converter convertNepaliDateToEnglishWithDate:date]);
+    
+    NSLog(@"Translate to nepali : %@", [converter translateRomanDateToNepali:date]);
+    
+    NSLog(@"Week Number : %lu", (long)[converter getWeekNumberOfEnglishDate:date]);
+    
+    NSLog(@"Week Number : %lu", (long)[converter getWeekNumberOfNepaliDate:date]);
+          
+    
 }
+
+
+
+
 @end

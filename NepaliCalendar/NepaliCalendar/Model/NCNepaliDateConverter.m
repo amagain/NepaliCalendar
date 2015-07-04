@@ -334,7 +334,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     NSUInteger nepaliDay = [components day];
     NSUInteger nepaliYear = [components year];
     
-    return [self convertNepaliDateToEnglishWithYear:nepaliYear month:nepaliMonth andDay:nepaliDay];
+    return [self convertEnglishDateToNepaliWithYear:nepaliYear month:nepaliMonth andDay:nepaliDay];
 }
 
 /**
@@ -382,9 +382,51 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     NSString *dayName = [dateFormatter stringFromDate:date];
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
     numberFormatter.numberStyle = NSNumberFormatterDecimalStyle;
-    NSNumber *myNumber = [numberFormatter numberFromString:dayName];
+    NSNumber *dayNumber = [numberFormatter numberFromString:dayName];
     
-    return myNumber;
+    return dayNumber;
 }
+
+- (NSUInteger)getWeekNumberOfEnglishDate:(NSDate *)englishDate {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *comps = [calendar components:NSWeekdayCalendarUnit fromDate:englishDate];
+    NSUInteger weekday = [comps weekday];
+    return weekday;
+}
+
+- (NSUInteger)getWeekNumberOfNepaliDate:(NSDate *)nepaliDate {
+    NSDictionary *dateDict = [self convertNepaliDateToEnglishWithDate:nepaliDate];
+    NSString *year = [dateDict objectForKey:@"year"];
+    NSString *month = [dateDict objectForKey:@"month"];
+    NSString *date = [dateDict objectForKey:@"date"];
+    
+    NSString *dateString = [NSString stringWithFormat:@"%@-%@-%@", date, month, year];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    // this is imporant - we set our input date format to match our input string
+    // if format doesn't match you'll get nil from your string, so be careful
+    [dateFormatter setDateFormat:@"dd-MM-yyyy"];
+    NSDate *dateFromString = [[NSDate alloc] init];
+    // voila!
+    dateFromString = [dateFormatter dateFromString:dateString];
+    return [self getWeekNumberOfEnglishDate:dateFromString];
+}
+
+- (NSDate *)convertStringToDate:(NSString *)dateString {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    // this is imporant - we set our input date format to match our input string
+    [dateFormatter setDateFormat:@"dd-MM-yyyy"];
+    NSDate *dateFromString = [[NSDate alloc] init];
+    dateFromString = [dateFormatter dateFromString:dateString];
+    return dateFromString;
+}
+
+- (NSString *)convertDateToString:(NSDate *)date {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd-MM-yyyy"];
+    NSString *dateString = [dateFormatter stringFromDate:date];
+    NSLog(@"%@", dateString);
+    return dateString;
+}
+
 
 @end
