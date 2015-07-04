@@ -30,6 +30,7 @@
 - (IBAction)convertEnglishToNepali:(id)sender {
     // dd/mm/yy
     NSString *dateString = self.nepaliDateTextField.text;
+    dateString = @"04-07-2015";
     NCNepaliDateConverter *converter = [[NCNepaliDateConverter alloc] init];
     
     NSDate *date = [converter convertStringToDate:dateString];
@@ -43,9 +44,9 @@
     
     NSLog(@"Translate to nepali : %@", [converter translateRomanDateToNepali:date]);
     
-    NSLog(@"Week Number : %lu", (long)[converter getWeekNumberOfEnglishDate:date]);
+    NSLog(@"Week Number : %lu", [converter getWeekNumberOfEnglishDate:date]);
     
-    NSLog(@"Week Number : %lu", (long)[converter getWeekNumberOfNepaliDate:date]);
+    NSLog(@"Week Number : %lu", [converter getWeekNumberOfNepaliDate:date]);
           
     
 }

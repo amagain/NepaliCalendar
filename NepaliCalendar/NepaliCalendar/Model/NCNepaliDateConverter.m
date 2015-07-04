@@ -387,14 +387,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     return dayNumber;
 }
 
-- (NSUInteger)getWeekNumberOfEnglishDate:(NSDate *)englishDate {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *components = [calendar components:NSWeekdayCalendarUnit fromDate:englishDate];
-    NSUInteger weekday = [components weekday];
+- (NSInteger)getWeekNumberOfEnglishDate:(NSDate *)englishDate {
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSISO8601Calendar];
+    NSDateComponents *components = [calendar components:NSWeekOfYearCalendarUnit |           NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit fromDate:englishDate];
+    NSInteger weekday = [components weekday];
     return weekday;
 }
 
-- (NSUInteger)getWeekNumberOfNepaliDate:(NSDate *)nepaliDate {
+- (NSInteger)getWeekNumberOfNepaliDate:(NSDate *)nepaliDate {
     NSDictionary *dateDict = [self convertNepaliDateToEnglishWithDate:nepaliDate];
     NSString *year = [dateDict objectForKey:@"year"];
     NSString *month = [dateDict objectForKey:@"month"];

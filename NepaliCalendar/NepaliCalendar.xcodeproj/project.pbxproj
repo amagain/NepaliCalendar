@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD1FD02C1B47A04E00904C1E /* DatePickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1FD02B1B47A04E00904C1E /* DatePickerVC.m */; };
 		CD7E221B1B472D24008799DC /* DateConverterTesterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E221A1B472D24008799DC /* DateConverterTesterVC.m */; };
 		D9A3F7B31B47636E0039CB88 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A3F7AA1B47636E0039CB88 /* HeaderView.m */; };
 		D9A3F7B41B47636E0039CB88 /* NCCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A3F7AC1B47636E0039CB88 /* NCCollectionViewCell.m */; };
@@ -46,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD1FD02A1B47A04E00904C1E /* DatePickerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatePickerVC.h; path = "Controller/untitled folder/DatePickerVC.h"; sourceTree = "<group>"; };
+		CD1FD02B1B47A04E00904C1E /* DatePickerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatePickerVC.m; path = "Controller/untitled folder/DatePickerVC.m"; sourceTree = "<group>"; };
 		CD7E22191B472D24008799DC /* DateConverterTesterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateConverterTesterVC.h; path = Controller/DateConverterTesterVC/DateConverterTesterVC.h; sourceTree = "<group>"; };
 		CD7E221A1B472D24008799DC /* DateConverterTesterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateConverterTesterVC.m; path = Controller/DateConverterTesterVC/DateConverterTesterVC.m; sourceTree = "<group>"; };
 		D9A3F7A91B47636E0039CB88 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
@@ -115,6 +118,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD1FD02D1B47A05D00904C1E /* DatePickerVC */ = {
+			isa = PBXGroup;
+			children = (
+				CD1FD02A1B47A04E00904C1E /* DatePickerVC.h */,
+				CD1FD02B1B47A04E00904C1E /* DatePickerVC.m */,
+			);
+			name = DatePickerVC;
+			sourceTree = "<group>";
+		};
 		CD7E22151B472924008799DC /* DateConverterTesterVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				CD7E22151B472924008799DC /* DateConverterTesterVC */,
+				CD1FD02D1B47A05D00904C1E /* DatePickerVC */,
 				DDB22C631B46C5CD001A8B96 /* Controller */,
 				DDB22C5A1B46B9F2001A8B96 /* Category */,
 				DDB22C591B46B9DF001A8B96 /* Model */,
@@ -358,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD1FD02C1B47A04E00904C1E /* DatePickerVC.m in Sources */,
 				D9A3F7B41B47636E0039CB88 /* NCCollectionViewCell.m in Sources */,
 				DDB22C821B476822001A8B96 /* NCNepaliCalendarVC.m in Sources */,
 				DDB22C4E1B46B3F2001A8B96 /* main.m in Sources */,

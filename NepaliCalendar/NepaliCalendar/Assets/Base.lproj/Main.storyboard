@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XY3-gZ-8sv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qMJ-ce-iG6">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
@@ -278,6 +278,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UAS-OJ-Jgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="361" y="952"/>
+        </scene>
+        <!--DatePickerVC-->
+        <scene sceneID="2pK-Oj-icw">
+            <objects>
+                <viewController id="qMJ-ce-iG6" userLabel="DatePickerVC" customClass="DatePickerVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Iam-CD-gIr"/>
+                        <viewControllerLayoutGuide type="bottom" id="tzE-xf-SMh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0HT-hb-kIp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QUv-7Z-80m">
+                                <rect key="frame" x="0.0" y="106" width="600" height="162"/>
+                                <color key="backgroundColor" red="0.54397101151315785" green="0.19400185032894737" blue="0.18141695619999992" alpha="1" colorSpace="calibratedRGB"/>
+                                <date key="date" timeIntervalSinceReferenceDate="457679005.69301802">
+                                    <!--2015-07-04 05:03:25 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-1506949200">
+                                    <!--1953-04-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="1001847600">
+                                    <!--2032-09-30 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqB-Cp-Ugb">
+                                <rect key="frame" x="279" y="362" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="IqB-Cp-Ugb" secondAttribute="centerY" constant="-72.5" id="Rev-So-0Su"/>
+                            <constraint firstAttribute="centerX" secondItem="IqB-Cp-Ugb" secondAttribute="centerX" id="Tgf-9a-XAP"/>
+                            <constraint firstItem="QUv-7Z-80m" firstAttribute="leading" secondItem="0HT-hb-kIp" secondAttribute="leadingMargin" constant="-16" id="VPz-hQ-geI"/>
+                            <constraint firstItem="QUv-7Z-80m" firstAttribute="top" secondItem="Iam-CD-gIr" secondAttribute="bottom" constant="86" id="YNr-mh-NcP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QUv-7Z-80m" secondAttribute="trailing" constant="-16" id="qEv-E0-WSJ"/>
+                            <constraint firstItem="IqB-Cp-Ugb" firstAttribute="top" secondItem="QUv-7Z-80m" secondAttribute="bottom" constant="94" id="zGS-lK-quo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePickerOutlet" destination="QUv-7Z-80m" id="pFj-ik-JTX"/>
+                        <outlet property="dateStringLabel" destination="IqB-Cp-Ugb" id="Fk3-Qo-JCg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CxT-xP-5xM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="361" y="1618"/>
         </scene>
     </scenes>
 </document>
