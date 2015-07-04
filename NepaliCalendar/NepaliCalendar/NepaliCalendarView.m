@@ -9,11 +9,10 @@
 #import "NepaliCalendarView.h"
 //For Section Header -> Year Title
 #import "HeaderView.h"
-//For Cell Header -> Weeks Title
-#import "NCCollectionViewHeaderCell.h"
 //For collcetion view cell
 #import "NCCollectionViewCell.h"
 #import "NepaliMonthsData.h"
+#import "SGNepaliDateConverter.h"
 
 @interface NepaliCalendarView() <UICollectionViewDataSource, UICollectionViewDelegate>
 

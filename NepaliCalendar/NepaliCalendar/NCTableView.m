@@ -15,6 +15,7 @@
 @property (strong, nonatomic) NSDictionary *dateDictionary;
 @property (strong, nonatomic) NSArray *week;
 @property (strong, nonatomic) NepaliMonthsData *nepaliMonth;
+//@property (strong, nonatomic) s
 
 @property NSUInteger startNepaliYear;
 @property NSUInteger startEnglishYear;
@@ -97,6 +98,14 @@ NSInteger startIndex = 4;
     }
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 60.0f;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return nil;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
