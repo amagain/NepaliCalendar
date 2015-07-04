@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "NepaliCalendarView.h"
+#import "NCTableView.h"
 
 @interface ViewController ()
 
@@ -17,9 +18,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NepaliCalendarView *calendar = [[NepaliCalendarView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width,  self.view.frame.size.width + 60)];
-    [self.view addSubview:calendar];
-    self.view.backgroundColor = [UIColor redColor];
+//    NepaliCalendarView *calendar = [[NepaliCalendarView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width,  self.view.frame.size.width + 60)];
+//    [self.view addSubview:calendar];
+//    self.view.backgroundColor = [UIColor redColor];
+    
+    NCTableView *view = [[NCTableView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:view];
+
     // Do any additional setup after loading the view, typically from a nib.
 }
 

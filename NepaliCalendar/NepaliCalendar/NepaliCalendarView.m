@@ -13,11 +13,14 @@
 #import "NCCollectionViewHeaderCell.h"
 //For collcetion view cell
 #import "NCCollectionViewCell.h"
+#import "NepaliMonthsData.h"
 
 @interface NepaliCalendarView() <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (strong, nonatomic) UICollectionView *collectionView;
 @property (strong, nonatomic) HeaderView *headerView;
+@property NSInteger startIndex;
+@property NSInteger dayCount;
 
 @end
 
@@ -31,20 +34,22 @@
 #define kLineSpace 1
 #define kCellPerRow 7
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame andStartIndex:(NSInteger)index andDayCount:(NSInteger)count{
     self = [super initWithFrame:frame];
     if (self) {
         //initialize here
-        UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc] init];
-        layout.headerReferenceSize = CGSizeMake(self.collectionView.frame.size.width, 60.f);
-//        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        self.collectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:layout];
+        self.startIndex = index;
+        self.dayCount = count;
         [self mainFunction];
     }
     return self;
 }
 
 - (void)mainFunction {
+    UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc] init];
+    layout.headerReferenceSize = CGSizeMake(self.collectionView.frame.size.width, 60.f);    //for collection view header
+    //        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    self.collectionView = [[UICollectionView alloc] initWithFrame:self.frame collectionViewLayout:layout];
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     self.collectionView.backgroundColor = [UIColor redColor];
@@ -53,37 +58,30 @@
     
     //register for collection view header
     [self.collectionView registerClass:[HeaderView class] forSupplementaryViewOfKind:@"UICollectionElementKindSectionHeader" withReuseIdentifier:@"header"];
-    
 }
 
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 10;
+    return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 49;
+    return 42;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (indexPath.row >= 0 && indexPath.row <= 6) {
-        //month header
-        static NSString *identifier = @"header";
-        [self.collectionView registerClass:[NCCollectionViewHeaderCell class] forCellWithReuseIdentifier:identifier];
-        NCCollectionViewHeaderCell *cell = (NCCollectionViewHeaderCell *)[collectionView dequeueReusableCellWithReuseIdentifier: identifier forIndexPath:indexPath];
-        cell.backgroundColor = [UIColor purpleColor];
-        cell.label.text = @"Week";
-        return cell;
+    static NSString *identifier = @"row";
+    [self.collectionView registerClass:[NCCollectionViewCell class] forCellWithReuseIdentifier:identifier];
+    NCCollectionViewCell *cell = (NCCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor whiteColor];
+    if (indexPath.row >= self.startIndex - 1 && indexPath.row <= self.dayCount + self.startIndex - 2) {
+        cell.label.text = [[NSString alloc] initWithFormat:@"%ld", indexPath.row - self.startIndex + 2];
     } else {
-        static NSString *identifier = @"row";
-        [self.collectionView registerClass:[NCCollectionViewCell class] forCellWithReuseIdentifier:identifier];
-        NCCollectionViewCell *cell = (NCCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-        cell.backgroundColor = [UIColor whiteColor];
-        cell.label.text = [[NSString alloc] initWithFormat:@"%ld", indexPath.row];
-        return cell;
+        cell.label.text = @"-";
     }
+
+    return cell;
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
@@ -117,6 +115,7 @@
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
     return kLineSpace;
 }
+
 
 
 @end

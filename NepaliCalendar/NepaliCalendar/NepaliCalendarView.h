@@ -10,4 +10,6 @@
 
 @interface NepaliCalendarView : UIView
 
+- (instancetype)initWithFrame:(CGRect)frame andStartIndex:(NSInteger)index andDayCount:(NSInteger)count;
+
 @end

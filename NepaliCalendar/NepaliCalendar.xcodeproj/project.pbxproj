@@ -21,6 +21,7 @@
 		D9A3F7741B46E7680039CB88 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A3F7731B46E7680039CB88 /* HeaderView.m */; };
 		D9A3F77C1B4717DE0039CB88 /* NepaliMonthsData.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A3F7791B4717DE0039CB88 /* NepaliMonthsData.m */; };
 		D9A3F77D1B4717DE0039CB88 /* SGNepaliDateConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A3F77B1B4717DE0039CB88 /* SGNepaliDateConverter.m */; };
+		D9A3F7811B4733380039CB88 /* NCTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A3F7801B4733380039CB88 /* NCTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		D9A3F7791B4717DE0039CB88 /* NepaliMonthsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NepaliMonthsData.m; path = ../NepaliMonthsData.m; sourceTree = "<group>"; };
 		D9A3F77A1B4717DE0039CB88 /* SGNepaliDateConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SGNepaliDateConverter.h; path = ../SGNepaliDateConverter.h; sourceTree = "<group>"; };
 		D9A3F77B1B4717DE0039CB88 /* SGNepaliDateConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SGNepaliDateConverter.m; path = ../SGNepaliDateConverter.m; sourceTree = "<group>"; };
+		D9A3F77F1B4733380039CB88 /* NCTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTableView.h; sourceTree = "<group>"; };
+		D9A3F7801B4733380039CB88 /* NCTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +156,8 @@
 				D9A3F76A1B46BFFB0039CB88 /* NCCollectionViewCell.m */,
 				D9A3F76C1B46C1D70039CB88 /* NCCollectionViewHeaderCell.h */,
 				D9A3F76D1B46C1D70039CB88 /* NCCollectionViewHeaderCell.m */,
+				D9A3F77F1B4733380039CB88 /* NCTableView.h */,
+				D9A3F7801B4733380039CB88 /* NCTableView.m */,
 				D9A3F7661B46BC3C0039CB88 /* NepaliCalendarView.h */,
 				D9A3F7671B46BC3C0039CB88 /* NepaliCalendarView.m */,
 			);
@@ -280,6 +285,7 @@
 				D9A3F7681B46BC3C0039CB88 /* NepaliCalendarView.m in Sources */,
 				D9A3F7431B46BBAF0039CB88 /* AppDelegate.m in Sources */,
 				D9A3F7401B46BBAF0039CB88 /* main.m in Sources */,
+				D9A3F7811B4733380039CB88 /* NCTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
