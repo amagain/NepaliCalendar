@@ -7,8 +7,7 @@
 //
 
 #import "DateConverterTesterVC.h"
-#import "SGNepaliDateConverter.h"
-
+#import "NCNepaliDateConverter.h"
 @interface DateConverterTesterVC ()
 @property (strong, nonatomic) IBOutlet UITextField *englishDateTextField;
 @property (strong, nonatomic) IBOutlet UITextField *nepaliDateTextField;
@@ -46,7 +45,7 @@
     NSUInteger day = [components day]; //gives you day
     NSUInteger year = [components year]; // gives
     
-    SGNepaliDateConverter *converter = [[SGNepaliDateConverter alloc] init];
+    NCNepaliDateConverter *converter = [[NCNepaliDateConverter alloc] init];
     NSMutableDictionary *nepaliDate = [converter convertEnglishDateToNepaliWithYear:year month:month andDay:day];
     NSMutableDictionary *englishDate = [converter convertNepaliDateToEnglishWithYear:year month:month andDay:day];
     englishDate = [converter translateRomanDateToNepali:dateNotFormatted];
