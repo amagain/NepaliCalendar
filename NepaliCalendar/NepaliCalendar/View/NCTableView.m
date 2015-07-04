@@ -53,9 +53,9 @@ static NSInteger kStartIndex = 4;
     self.nepaliMonth = [[NepaliMonthsData alloc] init];
     self.dateDictionary = self.nepaliMonth.numberOfDaysInNepaliMonths;
     self.startEnglishYear = self.nepaliMonth.startEnglishYear;
-    self.startNepaliYear = self.nepaliMonth.startNepaliYear;
-    self.startNepaliMonth = self.nepaliMonth.startNepaliMonth;
-    self.startNepaliDay = self.nepaliMonth.startNepaliDay;
+    self.startNepaliYear = self.nepaliMonth.startingNepaliYear;
+    self.startNepaliMonth = self.nepaliMonth.startingNepaliMonth;
+    self.startNepaliDay = self.nepaliMonth.startingNepaliDay;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
