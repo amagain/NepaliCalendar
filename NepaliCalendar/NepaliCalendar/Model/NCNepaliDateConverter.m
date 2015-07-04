@@ -1,28 +1,22 @@
 //
-//  SGNepaliDateConverter.m
+//  NCNepaliDateConverter.m
 //  NepaliCalender
 //
 //  Created by Saugat Gautam on 7/3/15.
 //  Copyright (c) 2015 Leapfrog Technology. All rights reserved.
 //
 
-#import "SGNepaliDateConverter.h"
+#import "NCNepaliDateConverter.h"
 #import "NepaliMonthsData.h"
 
-@interface SGNepaliDateConverter()
+@interface NCNepaliDateConverter()
 
-@property (strong, nonatomic) NSArray *englishDaysNameArray;
-@property (strong, nonatomic) NSArray *nepaliMonthsNameInNepaliArray;
-@property (strong, nonatomic) NSArray *nepaliDaysNameInNepaliArray;
-@property (strong, nonatomic) NSDictionary *numbersMappingEnglishToNepaliDict;
-@property (strong, nonatomic) NSMutableDictionary *nepaliDateComponents;
-@property (strong, nonatomic) NepaliMonthsData *objNepaliMonthsData;
-@property (strong, nonatomic) NSMutableDictionary *englishDateComponents;
 @property NSUInteger counter;
+@property (strong, nonatomic) NepaliMonthsData *objNepaliMonthsData;
 
 @end
 
-@implementation SGNepaliDateConverter
+@implementation NCNepaliDateConverter
 
 - (instancetype)init {
     
@@ -48,6 +42,9 @@
     
     NSArray *nepaliDaysNameInNepali = @[ @"आइतवार",@"सोमवार",@"मङ्लबार",@"बुधबार",@"बिहिबार",@"शुक्रबार",@"शनिबार" ];
     self.nepaliDaysNameInNepaliArray = [[NSArray alloc] initWithArray:nepaliDaysNameInNepali];
+    
+    NSArray *nepaliDaysNameShort = @[ @"आ",@"सो",@"म",@"बु",@"बि",@"शु",@"श" ];
+    self.nepaliDaysNameShortArray = [[NSArray alloc] initWithArray:nepaliDaysNameShort];
     
     NSDictionary *numbersMappingEnglishToNepali = @{ @"0" : @"०",
                                                     @"1" : @"१",

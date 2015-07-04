@@ -13,22 +13,18 @@
 @interface NCTableView() <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) NSDictionary *dateDictionary;
-@property (strong, nonatomic) NSArray *week;
 @property (strong, nonatomic) NepaliMonthsData *nepaliMonth;
-//@property (strong, nonatomic) s
 
-@property NSUInteger startNepaliYear;
-@property NSUInteger startEnglishYear;
-@property NSUInteger startNepaliMonth;
-@property NSUInteger startNepaliDay;
-
-//@property NSUInteger startIndex;
+@property (assign, nonatomic) NSUInteger startNepaliYear;
+@property (assign, nonatomic) NSUInteger startEnglishYear;
+@property (assign, nonatomic) NSUInteger startNepaliMonth;
+@property (assign, nonatomic) NSUInteger startNepaliDay;
 
 @end
 
-NSInteger yearFlag = 0;
-NSInteger dateFlag = 1;
-NSInteger startIndex = 4;
+static NSInteger kYearFlag = 0;
+static NSInteger kDateFlag = 1;
+static NSInteger kStartIndex = 4;
 
 @implementation NCTableView
 
@@ -50,7 +46,7 @@ NSInteger startIndex = 4;
     self.tableView.pagingEnabled = YES;
     [self addSubview:self.tableView];
 
-    self.week = @[@"Sun", @"Mon", @"Tue", @"Wed", @"Thurs", @"Fri", @"Sat"];
+    // self.week = @[@"Sun", @"Mon", @"Tue", @"Wed", @"Thurs", @"Fri", @"Sat"];
 }
 
 - (void)getDataFromModel {
@@ -71,29 +67,28 @@ NSInteger startIndex = 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSArray *month = [self.dateDictionary objectForKey:@(yearFlag)];
-    NSInteger monthDate = [month[dateFlag] integerValue];
+    NSArray *month = [self.dateDictionary objectForKey:@(kYearFlag)];
+    NSInteger monthDate = [month[kDateFlag] integerValue];
     static NSString *cellIdentifier = @"eventCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    NepaliCalendarView *calendar = [[NepaliCalendarView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width,  self.frame.size.width + 60) andStartIndex:startIndex andDayCount:monthDate];
+    NepaliCalendarView *calendar = [[NepaliCalendarView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width,  self.frame.size.width + 60) andStartIndex:kStartIndex andDayCount:monthDate];
     [cell.contentView addSubview:calendar];
-    cell.backgroundColor = [UIColor redColor];
     
     //date flag for month key eg: 30
-    dateFlag ++;
-    if (dateFlag > 12) {
-        dateFlag = 1;
-        yearFlag ++;
+    kDateFlag ++;
+    if (kDateFlag > 12) {
+        kDateFlag = 1;
+        kYearFlag ++;
     }
     
     //counting start index for next month
     for (NSInteger i = 1; i <= monthDate ; i++) {
-        startIndex ++;
-        if (startIndex > 7) {
-            startIndex = 1;
+        kStartIndex ++;
+        if (kStartIndex > 7) {
+            kStartIndex = 1;
         }
     }
     
