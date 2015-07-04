@@ -305,11 +305,20 @@
                                 </date>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqB-Cp-Ugb">
-                                <rect key="frame" x="279" y="362" width="42" height="21"/>
+                                <rect key="frame" x="279" y="362" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0It-Hz-ddp">
+                                <rect key="frame" x="248" y="397" width="105" height="30"/>
+                                <state key="normal" title="Show Calendar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showCalendar:" destination="qMJ-ce-iG6" eventType="touchUpInside" id="EyS-x0-8lQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -317,6 +326,8 @@
                             <constraint firstAttribute="centerX" secondItem="IqB-Cp-Ugb" secondAttribute="centerX" id="Tgf-9a-XAP"/>
                             <constraint firstItem="QUv-7Z-80m" firstAttribute="leading" secondItem="0HT-hb-kIp" secondAttribute="leadingMargin" constant="-16" id="VPz-hQ-geI"/>
                             <constraint firstItem="QUv-7Z-80m" firstAttribute="top" secondItem="Iam-CD-gIr" secondAttribute="bottom" constant="86" id="YNr-mh-NcP"/>
+                            <constraint firstAttribute="centerX" secondItem="0It-Hz-ddp" secondAttribute="centerX" constant="-0.5" id="fve-1W-wZh"/>
+                            <constraint firstItem="0It-Hz-ddp" firstAttribute="top" secondItem="IqB-Cp-Ugb" secondAttribute="bottom" constant="14.5" id="hgQ-Za-ly4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QUv-7Z-80m" secondAttribute="trailing" constant="-16" id="qEv-E0-WSJ"/>
                             <constraint firstItem="IqB-Cp-Ugb" firstAttribute="top" secondItem="QUv-7Z-80m" secondAttribute="bottom" constant="94" id="zGS-lK-quo"/>
                         </constraints>

@@ -8,10 +8,12 @@
 
 #import "DatePickerVC.h"
 #import "NCNepaliDateConverter.h"
+#import "NCTableView.h"
 
 @interface DatePickerVC ()
 @property (strong, nonatomic) IBOutlet UIDatePicker *datePickerOutlet;
 @property (strong, nonatomic) IBOutlet UILabel *dateStringLabel;
+- (IBAction)showCalendar:(id)sender;
 
 @end
 
@@ -66,4 +68,9 @@
 }
 */
 
+- (IBAction)showCalendar:(id)sender {
+    CGRect frame = CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height - 20);
+    NCTableView *tableView = [[NCTableView alloc] initWithFrame:frame];
+    [self.view addSubview:tableView];
+}
 @end

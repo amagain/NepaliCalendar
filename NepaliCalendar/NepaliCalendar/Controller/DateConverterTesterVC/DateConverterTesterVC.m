@@ -36,9 +36,14 @@
     NSDate *date = [converter convertStringToDate:dateString];
     NSLog(@"String to Date : %@", date);
     
+    NSDictionary *dateDictionary = [converter translateRomanDateToNepali:date];
+    self.englishDateTextField.text = [self getFormattedDateStringFromDictionary:dateDictionary];
+    
+    
     NSLog(@"Date to String : %@", [converter convertDateToString:date]);
     
-    NSLog(@"Date to Nepali : %@", [converter convertEnglishDateToNepaliWithDate:date]);
+    NSDictionary *nepaliDate = [converter convertEnglishDateToNepaliWithDate:date];
+    NSLog(@"Date to Nepali : %@", nepaliDate);
     
     NSLog(@"Date to English : %@", [converter convertNepaliDateToEnglishWithDate:date]);
     
@@ -49,6 +54,14 @@
     NSLog(@"Week Number : %lu", [converter getWeekNumberOfNepaliDate:date]);
           
     
+}
+
+- (NSString *)getFormattedDateStringFromDictionary:(NSDictionary *)dateDictionary {
+    NSString *day = [dateDictionary objectForKey:@"date"];
+    NSString *month = [dateDictionary objectForKey:@"month"];
+    NSString *year = [dateDictionary objectForKey:@"year"];
+    NSString *dateString = [NSString stringWithFormat:@"Nepali Date: %@-%@-%@ BS", day, month, year];
+    return dateString;
 }
 
 

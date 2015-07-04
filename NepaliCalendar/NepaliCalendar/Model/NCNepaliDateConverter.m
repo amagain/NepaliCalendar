@@ -406,7 +406,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     // if format doesn't match you'll get nil from your string, so be careful
     [dateFormatter setDateFormat:@"dd-MM-yyyy"];
     NSDate *dateFromString = [[NSDate alloc] init];
-    // voila!
     dateFromString = [dateFormatter dateFromString:dateString];
     return [self getWeekNumberOfEnglishDate:dateFromString];
 }
