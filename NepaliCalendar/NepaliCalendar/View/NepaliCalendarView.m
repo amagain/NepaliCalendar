@@ -86,7 +86,6 @@
     } else {
         cell.label.text = @" ";
     }
-
     return cell;
 }
 
