@@ -1,10 +1,6 @@
-//
-//  NCNepaliDateConverter.h
-//  NepaliCalender
-//
 //  The MIT License (MIT)
 /*
- Copyright (c) <year> <copyright holders>
+ Copyright (c) 2015 Leapfrog Technology. All rights reserved.
  
  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
  
@@ -12,8 +8,9 @@
  
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-//  Created by Saugat Gautam on 7/3/15.
-//  Copyright (c) 2015 Leapfrog Technology. All rights reserved.
+//
+//  NCNepaliDateConverter.h
+//  NepaliCalender
 //
 
 #import <Foundation/Foundation.h>
@@ -33,5 +30,18 @@
 
 - (BOOL)isLeapYear:(NSUInteger)year;
 - (NSArray *)convertEnglishDateToNepaliWithYear:(NSUInteger)year month:(NSUInteger)month andDay:(NSUInteger)day;
+- (NSMutableDictionary *)convertNepaliDateToEnglishWithYear:(NSUInteger)nepaliYear
+                                                      month:(NSUInteger)nepaliMonth
+                                                     andDay:(NSUInteger)nepaliDay;
+- (NSMutableDictionary *)convertNepaliDateToEnglishWithDate:(NSDate *)nepaliDate;
+- (NSMutableDictionary *)convertEnglishDateToNepaliWithDate:(NSDate *)englishDate;
+/**
+ *  Returns a mutable dictionary conatining nepali date components.
+ *
+ *  @param date an NSDate object that needs to be translated to Nepali.
+ *
+ *  @return an NSMutableDictionary object that contains both the names and numbers of days, months and year in Nepali.
+ */
+- (NSMutableDictionary *)translateRomanDateToNepali:(NSDate *)date;
 
 @end
