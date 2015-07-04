@@ -1,0 +1,8 @@
+.DS_Store
+xcuserdata
+/build/*
+/Pods/build/*
+DerivedData
+.ruby-version
+*.hmap
+*.pcm

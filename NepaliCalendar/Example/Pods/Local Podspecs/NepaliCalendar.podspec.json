@@ -1,0 +1,26 @@
+{
+  "name": "NepaliCalendar",
+  "version": "0.1.0",
+  "summary": "NepaliCalendar is a converter for AD to BS Date & BS to AD Date Converter",
+  "description": "                       * Nepali Date Converter Changes date from AD to BS\n                       * Nepali Date Converter Changes date from BS to AD\n                       * Has Sample Project in Objective-C to show the working Calendar\n",
+  "homepage": "https://github.com/shrsthakusal/NepaliCalendar",
+  "license": "MIT",
+  "authors": {
+    "Bishal Ghimire": "bishal.ghimire@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/shrsthakusal/NepaliCalendar.git"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "NepaliCalendar": [
+      "Pod/Assets/*.png"
+    ]
+  },
+  "public_header_files": "Pod/Classes/**/*.h",
+  "frameworks": "UIKit"
+}
