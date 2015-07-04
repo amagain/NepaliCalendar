@@ -2,6 +2,24 @@
 //  NCNepaliDateConverter.m
 //  NepaliCalender
 //
+//  The MIT License (MIT)
+/*
+Copyright (c) <year> <copyright holders>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+//  Created by Saugat Gautam on 7/3/15.
+//  Copyright (c) 2015 Leapfrog Technology. All rights reserved.
+//
+
+//
+//  NCNepaliDateConverter.m
+//  NepaliCalender
+//
 //  Created by Saugat Gautam on 7/3/15.
 //  Copyright (c) 2015 Leapfrog Technology. All rights reserved.
 //
@@ -191,7 +209,11 @@
             NSNumber *key = [NSNumber numberWithInteger:i];
             NSArray *currentNepaliMonth = [self.objNepaliMonthsData.numberOfDaysInNepaliMonths objectForKey:key];
             NSNumber *numberOfDaysInCurrentMonth = currentNepaliMonth[j];
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 95fdd99fb23f194cd2251e83ed7aa38cf8634ebe
             a = [numberOfDaysInCurrentMonth integerValue];
             totalNepaliDays++;						//count the days
             day++;								//count the days interms of 7 days
@@ -255,7 +277,11 @@
                 NSNumber *key = [NSNumber numberWithInteger:k];
                 NSArray *currentNepaliMonth = [self.objNepaliMonthsData.numberOfDaysInNepaliMonths objectForKey:key];
                 NSNumber *numberOfDaysInCurrentMonth = currentNepaliMonth[j];
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> 95fdd99fb23f194cd2251e83ed7aa38cf8634ebe
                 totalNepaliDays += [numberOfDaysInCurrentMonth integerValue];
             }
             k++;
@@ -269,7 +295,11 @@
             NSNumber *numberOfDaysInCurrentMonth = currentNepaliMonth[j];
             
             totalNepaliDays += [numberOfDaysInCurrentMonth integerValue];
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 95fdd99fb23f194cd2251e83ed7aa38cf8634ebe
         }
         
         // count total days in-terms of dat
@@ -297,7 +327,11 @@
             }
             if(day > 7)
                 day = 1;
+<<<<<<< HEAD
             totalNepaliDays--;	
+=======
+            totalNepaliDays--;
+>>>>>>> 95fdd99fb23f194cd2251e83ed7aa38cf8634ebe
         }
         numDay = day;
         
@@ -305,7 +339,11 @@
         self.englishDateComponents[@"date"] = [NSNumber numberWithInteger:totalEnglishDays];
         self.englishDateComponents[@"day"] = [NSNumber numberWithInteger:day];
         self.englishDateComponents[@"month"] = [NSNumber numberWithInteger:m];
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 95fdd99fb23f194cd2251e83ed7aa38cf8634ebe
         
         return self.englishDateComponents;
     }
@@ -391,5 +429,8 @@
     return myNumber;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 95fdd99fb23f194cd2251e83ed7aa38cf8634ebe
 @end
