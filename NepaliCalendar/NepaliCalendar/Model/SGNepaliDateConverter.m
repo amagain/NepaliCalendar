@@ -8,6 +8,8 @@
 
 #import "SGNepaliDateConverter.h"
 #import "NepaliMonthsData.h"
+#import "NSString+NepaliNumber.h"
+#import "NSNumber+NepaliDay.h"
 
 @interface SGNepaliDateConverter()
 
@@ -340,6 +342,56 @@
     nepaliDateDictionary = [self convertNepaliDateToEnglishWithYear:nepaliYear month:nepaliMonth andDay:nepaliDay];
     
     return nepaliDateDictionary;
+}
+
+/**
+ *  Returns a mutable dictionary conatining nepali date components.
+ *
+ *  @param date an NSDate object that needs to be translated to Nepali.
+ *
+ *  @return an NSMutableDictionary object that contains both the names and numbers of days, months and year in Nepali.
+ */
+- (NSMutableDictionary *)translateRomanDateToNepali:(NSDate *)date {
+    
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+    NSDateComponents* components = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:date];
+    
+    NSUInteger month = [components month];
+    NSUInteger day = [components day];
+    NSUInteger year = [components year];
+    
+    NSString *monthString = [NSString stringWithFormat: @"%ld", (long)month];
+    NSString *monthStringNepali = [monthString stringToNepaliNumber];
+    
+    NSString *dayString = [NSString stringWithFormat: @"%ld", (long)day];
+    NSString *dayStringNepali= [dayString stringToNepaliNumber];
+    
+    NSString *yearString = [NSString stringWithFormat:@"%ld", (long)year];
+    NSString *yearStringNepali = [yearString stringToNepaliNumber];
+    
+    NSNumber *dayName = [self getDayNumberFromDate:date];
+    NSString *dayNameInNepali = [dayName nepaliDayForNumber];
+    
+    NSArray *keys = @[ @"day", @"month", @"year", @"dayName" ];
+    NSArray *values = @[ dayStringNepali, monthStringNepali, yearStringNepali, dayNameInNepali ];
+    NSMutableDictionary *devnagariString = [[NSMutableDictionary alloc] initWithObjects:values forKeys:keys];
+    return devnagariString;
+}
+
+- (NSNumber *)getDayNumberFromDate:(NSDate *)date {
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    NSTimeZone *zone = [NSTimeZone localTimeZone];
+    
+    [dateFormatter setTimeZone:zone];
+    [dateFormatter setDateFormat:@"e"];
+    
+    NSString *dayName = [dateFormatter stringFromDate:date];
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+    numberFormatter.numberStyle = NSNumberFormatterDecimalStyle;
+    NSNumber *myNumber = [numberFormatter numberFromString:dayName];
+    
+    return myNumber;
 }
 
 

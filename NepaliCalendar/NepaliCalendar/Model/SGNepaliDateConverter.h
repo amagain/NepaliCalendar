@@ -20,5 +20,6 @@
 - (NSMutableDictionary *)convertEnglishDateToNepaliWithDate:(NSDate *)englishDate;
 - (NSMutableDictionary *)convertNepaliDateToEnglishWithYear:(NSUInteger)year month:(NSUInteger)month andDay:(NSUInteger)day;
 - (NSMutableDictionary *)convertNepaliDateToEnglishWithDate:(NSDate *)nepaliDate;
+- (NSMutableDictionary *)translateRomanDateToNepali:(NSDate *)date;
 
 @end

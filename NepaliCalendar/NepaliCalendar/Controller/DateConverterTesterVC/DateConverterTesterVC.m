@@ -49,9 +49,13 @@
     SGNepaliDateConverter *converter = [[SGNepaliDateConverter alloc] init];
     NSMutableDictionary *nepaliDate = [converter convertEnglishDateToNepaliWithYear:year month:month andDay:day];
     NSMutableDictionary *englishDate = [converter convertNepaliDateToEnglishWithYear:year month:month andDay:day];
+    englishDate = [converter translateRomanDateToNepali:dateNotFormatted];
+    NSLog(@"%@", englishDate);
+    for (NSString *key in englishDate) {
+        NSString *value = [englishDate objectForKey:key];
+        self.englishDateTextField.text = [[self.englishDateTextField.text stringByAppendingString:@", "] stringByAppendingString:value];
+    }
     NSUInteger nepaliYear = [[nepaliDate objectForKey:@"year"] integerValue];
     NSLog(@"NEPALI YEAR : %lu", (unsigned long)nepaliYear);
-    
-    
 }
 @end
